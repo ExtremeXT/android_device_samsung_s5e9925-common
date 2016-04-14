@@ -259,6 +259,9 @@ on init
 
     start watchdogd
 
+    # ZRAM setup
+    write /proc/sys/vm/page-cluster 0
+
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration
@@ -1161,6 +1164,10 @@ on property:sys.boot_completed=1
     write /sys/kernel/mpam/memory-intensive/submit "submit"
     write /sys/kernel/mpam/background/cpbm0 "0"
     write /sys/kernel/mpam/background/submit "submit"
+
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.${ro.hardware}
+    write /proc/sys/vm/swappiness 100
 
 # KERNEL CORE MEMORY
 on boot
