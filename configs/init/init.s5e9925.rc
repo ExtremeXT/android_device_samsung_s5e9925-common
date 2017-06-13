@@ -261,6 +261,8 @@ on init
 
     start watchdogd
 
+    setprop ro.boot.hardware.revision ${ro.revision}
+
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration
