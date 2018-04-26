@@ -101,6 +101,10 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
 
+# Linker
+PRODUCT_PACKAGES += \
+    public.libraries.txt
+
 # OTA
 AB_OTA_UPDATER := false
 
