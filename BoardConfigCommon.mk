@@ -105,6 +105,7 @@ TARGET_BOOTLOADER_BOARD_NAME := s5e9925
 TARGET_SOC := s5e9925
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
 
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
