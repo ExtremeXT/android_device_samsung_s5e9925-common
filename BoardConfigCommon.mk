@@ -74,6 +74,7 @@ TARGET_BOOTLOADER_BOARD_NAME := $(TARGET_BOARD_PLATFORM)
 TARGET_SOC := $(TARGET_BOARD_PLATFORM)
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
