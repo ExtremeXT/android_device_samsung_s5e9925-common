@@ -76,6 +76,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
 
+# Properties
+TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
+
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_RECOVERY_MKBOOTIMG_ARGS := --header_version 2
