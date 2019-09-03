@@ -32,6 +32,8 @@ PRODUCT_PACKAGES += \
     audio_effects.xml \
     audio_policy_configuration.xml
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
