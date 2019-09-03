@@ -43,6 +43,8 @@ PRODUCT_PACKAGES += \
     audio.usbv2.default \
     bluetooth_with_le_audio_policy_configuration_7_0.xml
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
