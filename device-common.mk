@@ -33,6 +33,8 @@ PRODUCT_PACKAGES += \
     audio_policy_configuration.xml \
 	mixer_paths.xml
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
