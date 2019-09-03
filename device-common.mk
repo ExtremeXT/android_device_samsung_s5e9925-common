@@ -42,6 +42,8 @@ PRODUCT_PACKAGES += \
     audio_effects.xml \
     audio_policy_configuration.xml
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
