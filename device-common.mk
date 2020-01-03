@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
@@ -268,6 +272,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.tsp.rc \
     vendor.lineage.touch-service.samsung
+
 
 # USB
 PRODUCT_PACKAGES += \
