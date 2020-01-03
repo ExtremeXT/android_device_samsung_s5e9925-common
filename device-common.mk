@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -274,6 +278,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.tsp.rc \
     vendor.lineage.touch-service.samsung
+
 
 # USB
 PRODUCT_PACKAGES += \
