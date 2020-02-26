@@ -57,6 +57,10 @@ $(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
