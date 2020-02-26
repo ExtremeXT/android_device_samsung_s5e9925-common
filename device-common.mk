@@ -60,6 +60,10 @@ $(call soong_config_set_bool,exynos_audio,use_usb_offload,true)
 $(call soong_config_set,exynos_audio,proxy_header,//$(LOCAL_PATH):audio_proxy_headers)
 $(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9925-common:libSamsungPostProcessConvertor)
 
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \

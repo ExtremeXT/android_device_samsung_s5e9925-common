@@ -30,6 +30,9 @@ bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.ccp.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=false
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
