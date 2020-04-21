@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth_le.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare-service.samsung
+
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
