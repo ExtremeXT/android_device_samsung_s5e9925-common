@@ -124,6 +124,10 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare-service.samsung
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
