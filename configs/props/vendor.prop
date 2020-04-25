@@ -43,6 +43,9 @@ ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 vendor.media.omx=0
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # DRM
 drm.service.enabled=true
 
