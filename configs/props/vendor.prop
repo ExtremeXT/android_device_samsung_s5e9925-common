@@ -40,6 +40,9 @@ media.c2.dmabuf.padding=512
 ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # DRM
 drm.service.enabled=true
 
