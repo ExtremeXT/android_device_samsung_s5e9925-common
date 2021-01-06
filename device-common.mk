@@ -21,6 +21,10 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# HIDL
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.s5e9925 \
