@@ -181,6 +181,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.samsung
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.samsung-multihal \
+    hals.conf
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
