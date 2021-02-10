@@ -26,7 +26,6 @@
                 <item>Speaker</item>
                 <item>Earpiece</item>
                 <item>Built-In Mic</item>
-                <item>Built-In Back Mic</item>
                 <item>Voice Call Mic</item>
                 <item>Echo-Reference In</item>
             </attachedDevices>
@@ -145,7 +144,6 @@
                 <devicePort tagName="HDMI" type="AUDIO_DEVICE_OUT_HDMI" role="sink"/>
 
                 <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source" default="true"/>
-                <devicePort tagName="Built-In Back Mic" type="AUDIO_DEVICE_IN_BACK_MIC" role="source"/>
 
                 <devicePort tagName="BT SCO Headset Mic" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source"/>
                 <devicePort tagName="Voice Call Mic" type="AUDIO_DEVICE_IN_VOICE_CALL" role="source"/>
@@ -182,13 +180,13 @@
                        sources="hdmi"/>
 
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="fast input"
-                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic,Built-In Back Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="hotword input"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
+                       sources="Built-In Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In"/>
                 <route type="mix" sink="echo_ref input" sources="Echo-Reference In"/>
             </routes>
