@@ -21,6 +21,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Kernel
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Kernel Modules
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
