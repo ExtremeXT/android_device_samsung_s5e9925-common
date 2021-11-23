@@ -225,5 +225,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
