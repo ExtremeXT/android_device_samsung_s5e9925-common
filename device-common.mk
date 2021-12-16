@@ -204,7 +204,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    cbd
+    cbd \
+    secril_config_svc
 
 $(call soong_config_set,cbd,protocol,sipc)
 
