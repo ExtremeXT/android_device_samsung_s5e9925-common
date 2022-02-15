@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
+# DRM
+PRODUCT_PACKAGES += \
+    com.android.hardware.drm.clearkey
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
