@@ -80,6 +80,9 @@ $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PACKAGES += \
+    com.android.hardware.drm.clearkey
+
 # EPIC
 PRODUCT_PACKAGES += \
 	libepicoperator
