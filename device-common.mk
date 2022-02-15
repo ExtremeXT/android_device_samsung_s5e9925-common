@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
+# DRM
+PRODUCT_PACKAGES += \
+    com.android.hardware.drm.clearkey
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
