@@ -208,6 +208,10 @@ PRODUCT_PACKAGES += \
     thermal_info_config.json \
     thermal_symlinks
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.samsung
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
 
