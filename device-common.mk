@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
+	SamsungDAP \
     audio_effects.xml \
     audio_policy_configuration.xml \
 	mixer_paths.xml
