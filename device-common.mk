@@ -34,6 +34,7 @@ PRODUCT_PACKAGES += \
     audio.primary.s5e9925 \
     audio.r_submix.default \
     audio.usbv2.default \
+    SamsungDAP \
     audio_effects.xml \
     audio_policy_configuration.xml
 
