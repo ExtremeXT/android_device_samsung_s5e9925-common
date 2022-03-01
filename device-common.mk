@@ -46,7 +46,8 @@ PRODUCT_PACKAGES += \
     audio.primary.s5e9925 \
     audio.r_submix.default \
     audio.usbv2.default \
-    bluetooth_with_le_audio_policy_configuration_7_0.xml
+    bluetooth_with_le_audio_policy_configuration_7_0.xml \
+    SamsungDAP
 
 TARGET_EXCLUDES_AUDIOFX := true
 
