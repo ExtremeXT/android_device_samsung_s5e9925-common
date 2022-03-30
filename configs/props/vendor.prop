@@ -41,6 +41,7 @@ media.c2.dmabuf.padding=512
 media.c2.hal.selection=aidl
 ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
+vendor.media.omx=0
 
 # Graphics
 ro.hardware.egl=samsung
