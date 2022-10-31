@@ -172,6 +172,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
     FrameworkResOverlayCommon \
     LineageSDKOverlayCommon \
     SettingsOverlayCommon \
