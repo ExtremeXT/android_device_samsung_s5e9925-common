@@ -22,6 +22,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/s5e9925-common',
+    'hardware/samsung',
     'vendor/samsung/s5e9925-common',
 ]
 
