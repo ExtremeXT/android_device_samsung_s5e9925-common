@@ -44,6 +44,7 @@ vendor.debug.c2.sbwc.enable=true
 ro.fastbootd.available=true
 
 # Graphics
+debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.high_fps_late_app_phase_offset_ns=0
 debug.sf.high_fps_late_sf_phase_offset_ns=0
