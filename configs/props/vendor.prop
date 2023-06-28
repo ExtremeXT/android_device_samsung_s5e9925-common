@@ -59,6 +59,7 @@ ro.vendor.fingerprint.force_calibrate=1
 ro.frp.pst=/dev/block/by-name/persistent
 
 # Graphics
+debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.sf.early.app.duration=16600000
 debug.sf.early.sf.duration=16600000
