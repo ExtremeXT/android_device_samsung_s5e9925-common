@@ -151,11 +151,15 @@ PRODUCT_PACKAGES += \
     public.libraries.txt
 
 # NFC
+ifeq ($(BOARD_HAVE_NXP_NFC), true)
 PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp \
+    android.hardware.secure_element-service.nxp \
     init.nfc.samsung.rc \
     libese-nxp.conf \
     libnfc-nxp.conf \
     libnfc-nxp_RF.conf
+endif
 
 # OTA
 AB_OTA_UPDATER := false
@@ -170,6 +174,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
@@ -183,6 +188,12 @@ PRODUCT_PACKAGES += \
     android.hardware.fingerprint.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml \
     android.hardware.location.gps.prebuilt.xml \
+    android.hardware.nfc.ese.prebuilt.xml \
+    android.hardware.nfc.hce.prebuilt.xml \
+    android.hardware.nfc.hcef.prebuilt.xml \
+    android.hardware.nfc.prebuilt.xml \
+    android.hardware.se.omapi.ese.prebuilt.xml \
+    android.hardware.se.omapi.uicc.prebuilt.xml \
     android.hardware.sensor.barometer.prebuilt.xml \
     android.hardware.sensor.gyroscope.prebuilt.xml \
     android.hardware.sensor.hifi_sensors.prebuilt.xml \
@@ -198,7 +209,8 @@ PRODUCT_PACKAGES += \
     android.hardware.vulkan.level-1.prebuilt.xml \
     android.hardware.vulkan.version-1_3.prebuilt.xml \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml \
-    android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml
+    android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml \
+    com.nxp.mifare.prebuilt.xml
 
 # Platform
 BOARD_SHIPPING_API_LEVEL := 31
