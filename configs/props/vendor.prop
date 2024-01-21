@@ -43,6 +43,9 @@ ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 vendor.media.omx=0
 
+# Fingerprint
+ro.vendor.fingerprint.force_calibrate=1
+
 # Graphics
 debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_transaction_tracing=false
