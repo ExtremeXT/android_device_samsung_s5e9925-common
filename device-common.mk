@@ -90,6 +90,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.samsung \
+    init.fingerprint.rc
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -163,6 +168,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.flash-autofocus.prebuilt.xml \
     android.hardware.camera.full.prebuilt.xml \
     android.hardware.camera.raw.prebuilt.xml \
+    android.hardware.fingerprint.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml \
     android.hardware.sensor.barometer.prebuilt.xml \
     android.hardware.sensor.gyroscope.prebuilt.xml \

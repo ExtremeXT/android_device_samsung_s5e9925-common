@@ -46,6 +46,10 @@ vendor.media.omx=0
 # Fastbootd
 ro.fastbootd.available=true
 
+# Fingerprint
+ro.vendor.fingerprint.force_calibrate=1
+ro.vendor.fingerprint.type=udfps
+
 # Graphics
 debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_transaction_tracing=false
