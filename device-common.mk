@@ -74,6 +74,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
+$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
