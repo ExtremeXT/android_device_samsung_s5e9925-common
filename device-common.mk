@@ -216,7 +216,11 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.samsung
+    android.hardware.usb-service.samsung \
+    android.hardware.usb.gadget-service.samsung \
+    init.s5e9925.usb.rc
+
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
