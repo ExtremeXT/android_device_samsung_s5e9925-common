@@ -198,7 +198,9 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     cbd \
-    secril_config_svc
+    secril_config_svc \
+    sehradiomanager \
+    sehradiomanager.conf
 
 $(call soong_config_set,cbd,protocol,sipc)
 
