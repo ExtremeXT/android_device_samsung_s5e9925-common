@@ -161,6 +161,11 @@ PRODUCT_PACKAGES += \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml \
     android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr \
+    powerhint.json
+
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.samsung
