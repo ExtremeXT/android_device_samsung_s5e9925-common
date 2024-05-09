@@ -247,6 +247,8 @@ on init
     chown system system /dev/ufd_throughput_max
     chown system system /sys/kernel/gpu/gpu_ifpo_runtime_control
 
+    setprop vendor.powerhal.init 1
+
     # Apply network parameters for high data performance.
     write /proc/sys/net/core/rmem_default 327680
     write /proc/sys/net/core/rmem_max 8388608
