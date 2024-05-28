@@ -25,13 +25,17 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
 
+# OTA
+AB_OTA_UPDATER := false
+
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    bootable/deprecated-ota
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
