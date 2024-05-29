@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
     media_codecs_performance_c2.xml \
     media_profiles_V1_0.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
