@@ -70,6 +70,10 @@ PRODUCT_PACKAGES += \
     codec2.vendor.base.policy \
     codec2.vendor.ext.policy
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
