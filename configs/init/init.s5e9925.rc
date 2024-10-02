@@ -2,7 +2,7 @@ on early-init
     mkdir /mnt/vendor/efs 0771 radio system
     mkdir /mnt/vendor/cpefs 0771 radio system
     mkdir /mnt/vendor/persist 0771 system system
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules input_booster_lkm.ko
     export MEMTAG_OPTIONS off
 
@@ -723,9 +723,6 @@ on post-fs-data
     # Create camera folder for setcal
     mkdir /mnt/vendor/efs/camera 0775 system system
 
-    chmod 0755 /sys/kernel/debug/tracing
-    restorecon /sys/kernel/debug/tracing/trace_marker
-
     # ALS_rear_sensor
     chown system radio /sys/class/sensors/als_rear/name
     chown system radio /sys/class/sensors/als_rear/vendor
@@ -808,10 +805,6 @@ on boot
     chown system system /dev/cpuset/moderate/cpus
     chmod 0664 /dev/cpuset/moderate/tasks
     chmod 0664 /dev/cpuset/moderate/cpus
-
-    # Allow to access debugfs for system:system
-    chown system system /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
 
     # Fingerprint sensor
     chown system system /dev/qbt2000_fd
@@ -901,10 +894,6 @@ on boot
     chmod 0770 /mnt/vendor/efs/bluetooth
     chmod 0660 /mnt/vendor/efs/bluetooth/bt_addr
 
-    # Set up kernel tracing, but disable it by default
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-    write /sys/kernel/debug/tracing/tracing_on 0
-
     # Change permission for A-Box firmware logs file & GPR dump
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/gicd
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/gpr
@@ -912,7 +901,6 @@ on boot
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_dram
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_log
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_slog
-    chown audioserver system /sys/kernel/debug/regmap/18c50000.abox/registers
     chown audioserver system /proc/abox/log-00
     chown audioserver system /proc/abox/qos
     chown audioserver system /proc/abox/failsafe/online
