@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     ueventd.s5e9925.rc
 
 # Kernel
+PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Kernel Modules
