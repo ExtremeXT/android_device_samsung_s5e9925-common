@@ -205,6 +205,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# RIL
+PRODUCT_PACKAGES += \
+    cbd
+
+$(call soong_config_set,cbd,protocol,sipc)
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
@@ -222,6 +228,7 @@ PRODUCT_SOONG_NAMESPACES += \
 	hardware/samsung \
 	hardware/samsung_slsi-linaro/codec2 \
 	hardware/samsung_slsi-linaro/exynos \
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
 	hardware/samsung_slsi-linaro/interfaces \
 	hardware/samsung_slsi-linaro/sgpu
 
