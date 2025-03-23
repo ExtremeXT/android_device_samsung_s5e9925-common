@@ -198,6 +198,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# RIL
+PRODUCT_PACKAGES += \
+    cbd
+
+$(call soong_config_set,cbd,protocol,sipc)
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
@@ -212,7 +218,8 @@ PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-	hardware/samsung
+	hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3
 
 # TEEgris
 PRODUCT_PACKAGES += \
