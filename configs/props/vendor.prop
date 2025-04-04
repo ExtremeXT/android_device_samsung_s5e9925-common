@@ -56,6 +56,9 @@ ro.fastbootd.available=true
 ro.vendor.fingerprint.force_calibrate=1
 ro.vendor.fingerprint.type=udfps
 
+# FSMGR
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 # FRP
 ro.frp.pst=/dev/block/persistent
 
