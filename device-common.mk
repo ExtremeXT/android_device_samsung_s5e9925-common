@@ -264,7 +264,8 @@ PRODUCT_PACKAGES += \
 
 # TSP
 PRODUCT_PACKAGES += \
-    init.tsp.rc
+    init.tsp.rc \
+    vendor.lineage.touch-service.samsung
 
 # USB
 PRODUCT_PACKAGES += \
