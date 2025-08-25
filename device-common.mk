@@ -153,6 +153,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     public.libraries.txt
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.samsung-exynos
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
