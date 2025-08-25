@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     public.libraries.txt
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.samsung-exynos
+
 # NFC
 ifeq ($(BOARD_HAVE_NXP_NFC), true)
 PRODUCT_PACKAGES += \
