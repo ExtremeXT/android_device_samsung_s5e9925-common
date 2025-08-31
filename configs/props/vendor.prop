@@ -101,6 +101,9 @@ ro.telephony.default_cdma_sub=0
 ro.vendor.cscsupported=1
 ro.vendor.epdg.support=true
 
+# Verity
+ro.apk_verity.mode=2
+
 # Weaver
 security.securehw.available=false
 security.securenvm.available=false
