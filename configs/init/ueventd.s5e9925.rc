@@ -41,12 +41,16 @@
 # dma-heap
 /dev/dma_heap/crypto                0660   system     system
 /dev/dma_heap/crypto-uncached       0660   system     system
-/dev/dma_heap/camera                0660   system     system
-/dev/dma_heap/camera-uncached       0660   system     system
+/dev/dma_heap/camera                0666   system     system
+/dev/dma_heap/camera-uncached       0666   system     system
 
 /dev/dma_heap/vframe-secure         0660   system     drmrpc
 /dev/dma_heap/vscaler-secure        0660   system     system
 /dev/dma_heap/secure_camera-secure  0660   system     camera
+
+# Standard writable heaps for media/camera/gfx
+/dev/dma_heap/system                 0666   system     system
+/dev/dma_heap/system-uncached        0666   system     system
 
 # dma-heap with prefix system-secure
 /dev/dma_heap/system-secure-gpu_buffer-secure     0444   system     system
