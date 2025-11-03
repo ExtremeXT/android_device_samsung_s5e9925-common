@@ -7,6 +7,10 @@
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Kernel Modules
+PRODUCT_PACKAGES += \
+    toolbox.vendor_ramdisk
+
 # Shipping API level
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 31
