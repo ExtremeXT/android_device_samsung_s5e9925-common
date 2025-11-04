@@ -21,6 +21,18 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.s5e9925 \
+	init.recovery.s5e9925.rc \
+    init.s5e9925.rc \
+	init.samsung.rc \
+    ueventd.s5e9925.rc
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/init/fstab.s5e9925:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.s5e9925 \
+	$(LOCAL_PATH)/configs/init/fstab.s5e9925:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.s5e9925
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
