@@ -3,12 +3,31 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# All components inherited here go to system image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
+# All components inherited here go to system_ext image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+# All components inherited here go to product image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
+
+# All components inherited here go to vendor image
+$(call inherit-product, $(SRC_TARGET_DIR)/product/media_vendor.mk)
+
 # Kernel Modules
 PRODUCT_PACKAGES += \
     toolbox.vendor_ramdisk
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Permissions
+PRODUCT_PACKAGES += \
+    handheld_core_hardware.prebuilt.xml
 
 # Platform
 BOARD_SHIPPING_API_LEVEL := 31
