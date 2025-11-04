@@ -27,6 +27,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.s5e9925 \
+    fstab.s5e9925.vendor_ramdisk \
+    init.recovery.s5e9925.rc \
+    init.s5e9925.rc \
+    init.samsung.rc \
+    ueventd.s5e9925.rc
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
