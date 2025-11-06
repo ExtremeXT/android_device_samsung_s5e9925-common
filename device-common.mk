@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usbv2.default \
     audio_effects.xml \
-    audio_policy_configuration.xml
+    audio_policy_configuration.xml \
+	mixer_paths.xml
 
 # Configstore
 PRODUCT_PACKAGES += \

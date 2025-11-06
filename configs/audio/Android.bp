@@ -15,3 +15,9 @@ prebuilt_etc {
     src: "audio_policy_configuration.xml",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "mixer_paths.xml",
+    src: "mixer_paths.xml",
+    vendor: true,
+}
