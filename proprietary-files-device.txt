@@ -1,6 +1,18 @@
 # All unpinned blobs are from the release mentioned in
 # device's proprietary-files.txt, unless pinned
 
+# Audio
+vendor/etc/dolby/dax-default.xml
+vendor/etc/mixer_usb_default.xml
+vendor/etc/mixer_usb_gray.xml
+vendor/etc/mixer_usb_white.xml
+vendor/etc/SoundBoosterParam.txt
+vendor/firmware/SoundBoosterParam.bin
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswspatializer.so
+
 # TEEgris Firmware (latest)
 vendor/tee/00000000-0000-0000-0000-000000010081:vendor/etc/tee_new/00000000-0000-0000-0000-000000010081
 vendor/tee/00000000-0000-0000-0000-000000020081:vendor/etc/tee_new/00000000-0000-0000-0000-000000020081
