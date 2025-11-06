@@ -54,6 +54,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
             'android.hardware.security.keymint-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    (
+        'vendor/lib/hw/audio.primary.s5e9925.so',
+        'vendor/lib/libalsautils_sec.so',
+        'vendor/lib/libaudioparamupdate.so',
+        'vendor/lib/libaudioproxy2.so',
+        'vendor/lib/libaudioroute_samsung.so',
+    ): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute_samsung.so')
+        .replace_needed('libtinyalsa.so', 'libtinyalsa_samsung.so'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -63,6 +72,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     'libuuid': lib_fixup_vendor_suffix,
+    'libvibrator': lib_fixup_vendor_suffix,
 }
 
 module = ExtractUtilsModule(

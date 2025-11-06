@@ -1,6 +1,52 @@
 # All unpinned blobs are from S908BXXSIFYI3
 # Vendor security patch level 2025-09-01
 
+
+# Audio
+vendor/etc/audio_board_info.xml
+vendor/etc/LVACFS_Calibration.dat
+vendor/etc/LVACFS_Configuration.txt
+vendor/etc/LVACFS_ControlParams.txt
+vendor/lib/hw/audio.primary.s5e9925.so
+vendor/lib/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
+vendor/lib/lib_lvacfs.so
+vendor/lib/lib_SamsungRec_08020.so
+vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_soundaliveresampler.so
+vendor/lib/libaboxpcmdump.so;DISABLE_CHECKELF
+vendor/lib/libalsautils_sec.so
+vendor/lib/libaudio-ril.so
+vendor/lib/libaudioparamupdate.so
+vendor/lib/libaudioproxy2.so
+vendor/lib/libdatamod.so
+vendor/lib/liblastaboxmsg.so
+vendor/lib/librecordalive.so
+vendor/lib/libSamsungPostProcessConvertor.so
+vendor/lib/libsecaudioinfo.so
+vendor/lib/libsehbluetooth_audio_session.so
+vendor/lib/libspeakercalibration.so
+vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute_samsung.so;FIX_SONAME
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa_samsung.so;FIX_SONAME
+
+# Audio Effects
+vendor/etc/dolby/dax-default.xml
+vendor/etc/SoundBoosterParam.txt
+vendor/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib/lib_SoundAlive_play_plus_ver800.so
+vendor/lib/lib_SoundBooster_ver1100.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
+vendor/lib/libspatializerparamstorage.so
+vendor/lib/libvibrator.so;MODULE_SUFFIX=_vendor
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libhapticgenerator.so
+vendor/lib/soundfx/libmyspace.so
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
