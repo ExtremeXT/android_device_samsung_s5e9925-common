@@ -60,6 +60,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     (
         'vendor/lib64/hw/audio.primary.s5e9925.so',
+        'vendor/lib64/hw/sound_trigger.primary.s5e9925.so',
         'vendor/lib64/libaboxpcmdump.so',
         'vendor/lib64/libalsautils_sec.so',
         'vendor/lib64/libaudioparamupdate.so',
