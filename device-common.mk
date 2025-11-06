@@ -27,6 +27,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Inherit some common Lineage stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Audio
+$(call soong_config_set_bool,frameworks_av,use_aosp_audio_policy_volumes,true)
+$(call soong_config_set_bool,frameworks_av,use_aosp_default_volume_tables,true)
+$(call soong_config_set_bool,frameworks_av,use_aosp_r_submix_audio_policy_configuration,true)
+
+PRODUCT_PACKAGES += \
+    aosp_audio_policy_volumes.xml \
+    aosp_default_volume_tables.xml \
+    aosp_r_submix_audio_policy_configuration.xml \
+    audio_effects.xml \
+    audio_policy_configuration.xml \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usbv2.default \
+    bluetooth_with_le_audio_policy_configuration_7_0.xml
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
