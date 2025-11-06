@@ -33,6 +33,10 @@ $(call soong_config_set_bool,frameworks_av,use_aosp_default_volume_tables,true)
 $(call soong_config_set_bool,frameworks_av,use_aosp_r_submix_audio_policy_configuration,true)
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio.service \
+    android.hardware.audio@7.1-impl \
+    android.hardware.bluetooth.audio-impl \
     aosp_audio_policy_volumes.xml \
     aosp_default_volume_tables.xml \
     aosp_r_submix_audio_policy_configuration.xml \
