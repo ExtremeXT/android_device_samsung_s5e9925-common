@@ -1,6 +1,30 @@
 # All unpinned blobs are from S908BXXSKGYK5
 # Vendor security patch level 2025-11-01
 
+# Audio 
+vendor/etc/audio_board_info.xml
+vendor/etc/dolby/dax-default.xml
+vendor/etc/mixer_usb_default.xml
+vendor/etc/mixer_usb_gray.xml
+vendor/etc/mixer_usb_white.xml
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver800.so
+vendor/lib64/lib_SoundBooster_ver1100.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libsecaudiocoreutils.so
+vendor/lib64/libsecaudioinfo.so
+vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libvibrator.so;MODULE_SUFFIX=_vendor
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libhapticgenerator.so
+vendor/lib64/soundfx/libmyspace.so
+
+# Audio (A546EXXSGEYK7)
+vendor/lib64/lib_SoundAlive_SRC384_ver320.so|26ef33d16f3a4f76891d8e5b4559f96ad0bb2791
+vendor/lib64/lib_soundaliveresampler.so|4b8b33d7dcebaafa2cad79fe27caf91c4ea8a9b1
+vendor/lib64/libSamsungPostProcessConvertor.so|2c1a5325c85a15e3c27d6b985ae37dc809d01a13
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
