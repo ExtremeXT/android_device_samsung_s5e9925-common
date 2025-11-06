@@ -1,6 +1,47 @@
 # All unpinned blobs are from S908BXXSKGYK5
 # Vendor security patch level 2025-11-01
 
+# Audio 
+vendor/etc/audio_board_info.xml
+vendor/etc/dolby/dax-default.xml
+vendor/etc/LVACFS_Configuration.txt
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver800.so
+vendor/lib64/lib_SoundBooster_ver1100.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libsecaudiocoreutils.so
+vendor/lib64/libsecaudioinfo.so
+vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libspeakercalibration.so
+vendor/lib64/libvibrator.so;MODULE_SUFFIX=_vendor
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libhapticgenerator.so
+vendor/lib64/soundfx/libmyspace.so
+
+# Audio (A546EXXSGEYK7)
+vendor/lib64/hw/audio.primary.s5e8835.so:vendor/lib64/hw/audio.primary.s5e9925.so;FIX_SONAME|e2cea85d1e7820c52fa10d5e0a9feaf1236ca7ac|e06596133c66b381ffd75491ac6b45f058b34a9c
+vendor/lib64/lib_SoundAlive_SRC384_ver320.so|26ef33d16f3a4f76891d8e5b4559f96ad0bb2791
+vendor/lib64/lib_soundaliveresampler.so|4b8b33d7dcebaafa2cad79fe27caf91c4ea8a9b1
+vendor/lib64/libaboxpcmdump.so|214eea47d5e95351b5321ace79baad6742b9f002|3771a3eb84bc7b31d700d3bd8f2c6a1e7a686fcc
+vendor/lib64/libalsautils_sec.so|631072998b07d31fd5c1604f763c429b0d677b64|112f015f28b87d1fd7fc2724d291dcd371916f56
+vendor/lib64/libaudio-ril.so|53ed0f4cb9c63731cd73d0d22614260a53fbe2ee
+vendor/lib64/libaudioparamupdate.so|a3183216bec09f49d8ea425dadf25b75e023430b|6fe007bcd4cd1ad8f71c082cc3f74275a4fd9851
+vendor/lib64/libaudioproxy2.so|d0857c7f00b2c40afa53d261198e131e4e3b01c3|4767e9c58c2811801f7613333823b75d8fe881d6
+vendor/lib64/libdatamod.so|f09c8b88fc5239d03c143bfe6cbc51bd757a622d
+vendor/lib64/liblastaboxmsg.so|feffcde6adf20418135792b73f4fe05bd0c846e4
+vendor/lib64/libSamsungPostProcessConvertor.so|2c1a5325c85a15e3c27d6b985ae37dc809d01a13
+vendor/lib64/libsecaudiolevel.so|1080b0c8b417ba2ebe930d3ad72d9ffb56b1dbd1
+vendor/lib64/libsehbluetooth_audio_session_aidl.so|c4f51fd336c32e4e35d2e3edf2d5c886195936e3
+vendor/lib64/vendor.samsung.hardware.bluetooth.audio-V1-ndk.so|e860ba5f7fe9ddcfef71dc7ec21f3cfc35a1c266
+vendor/lib64/vndk/libaudioroute.so:vendor/lib64/libaudioroute_samsung.so;FIX_SONAME|12c8e7298e1e87c1f01e644574cb9e604c46ec02|1fb21a7feffd0c8975719e1bdaf1736afb4ea304
+vendor/lib64/vndk/libtinyalsa.so:vendor/lib64/libtinyalsa_samsung.so;FIX_SONAME|cc65dec7d0a17c806a9b5e535da0cd7448781f59|752ff98f1bd8d912914022916ca2c6df96dacdd6
+
+# Audio (S921BXXU5BYD9)
+vendor/lib64/lib_lvacfs.so|0e68915914a09b13c9df6cecc278dac21594abb5
+vendor/lib64/librecordalive.so|f2815e3d363fc1bef3ffc6d39465a299284b96a0
+vendor/lib64/lib_SamsungRec_08020.so|f3143059edaa17a83d047508a8ff22a6fa770e92
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
