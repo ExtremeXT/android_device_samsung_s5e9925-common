@@ -1,2 +1,5 @@
 # All unpinned blobs are from S908BXXSIFYI3
 # Vendor security patch level 2025-09-01
+
+# VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
+vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
