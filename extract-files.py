@@ -17,10 +17,17 @@ namespace_imports = [
     'vendor/samsung/s5e9925-common',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    'vendor/bin/hermesd': blob_fixup()
+        .binary_regex_replace(b'security.securehw.available', b'vendor.s.securehw.available')
+        .binary_regex_replace(b'security.securenvm.available', b'vendor.s.securenvm.available'),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     's5e9925-common',
     'samsung',
     namespace_imports=namespace_imports,
+    blob_fixups=blob_fixups,
 )
 
 if __name__ == '__main__':

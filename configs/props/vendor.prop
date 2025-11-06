@@ -1,3 +1,7 @@
+# Weaver
+vendor.s.securehw.available=false
+vendor.s.securenvm.available=false
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
