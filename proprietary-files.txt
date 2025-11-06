@@ -3,3 +3,18 @@
 
 # VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
 vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
+
+# Weaver
+vendor/bin/hermesd
+vendor/etc/init/hermesd.rc
+vendor/etc/secnvm/k250a_47000301_0.img
+vendor/etc/secnvm/k250a_47000304_c.img
+vendor/etc/secnvm/k250a_47000306_1.img
+vendor/firmware/secnvm/k250a_fw_image.manifest
+vendor/lib64/libhermes_bdbridge.so
+vendor/lib64/libhermes_cred.so
+vendor/lib64/libhwvault.so
+vendor/lib64/libshctrl.so
+vendor/lib64/vendor.samsung.hardware.security.drk-V1-ndk_platform.so
+vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
+vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk_platform.so
