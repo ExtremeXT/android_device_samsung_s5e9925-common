@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.primary.s5e9925 \
     audio.r_submix.default \
@@ -48,6 +49,7 @@ $(call soong_config_set_bool,exynos_audio,use_sec_audio_dynamic_nrec,true)
 $(call soong_config_set_bool,exynos_audio,use_sec_audio_samsungrecord,true)
 $(call soong_config_set_bool,exynos_audio,use_sec_audio_support_gamechat_spk_aec,true)
 $(call soong_config_set_bool,exynos_audio,use_sec_audio_support_listenback_dspeffect,true)
+$(call soong_config_set_bool,exynos_audio,use_soundtrigger_hal,true)
 $(call soong_config_set_bool,exynos_audio,use_usb_offload,true)
 $(call soong_config_set,exynos_audio,proxy_header,//$(LOCAL_PATH):audio_proxy_headers)
 $(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9925-common:libSamsungPostProcessConvertor)

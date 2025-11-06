@@ -38,6 +38,14 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# SoundTrigger
+product/priv-app/HotwordEnrollmentOKGoogleEx4CORTEXM55/HotwordEnrollmentOKGoogleEx4CORTEXM55.apk
+product/priv-app/HotwordEnrollmentXGoogleEx4CORTEXM55/HotwordEnrollmentXGoogleEx4CORTEXM55.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+vendor/etc/sound_trigger_info.xml
+vendor/lib64/hw/sound_trigger.primary.s5e9925.so
+
 # TEEgris
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
