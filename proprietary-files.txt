@@ -63,6 +63,28 @@ vendor/lib64/libepic_helper.so
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
+# Graphics
+vendor/etc/hdr_samsung_mx.key
+vendor/lib/hw/vulkan.samsung.so
+vendor/lib/libacryl.so
+vendor/lib/libdrmresource.so
+vendor/lib/libexynosdisplay.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libion_exynos.so
+vendor/lib/libSGPUOpenCL.so:vendor/lib/libOpenCL.so;FIX_SONAME;TRYSRCFIRST
+vendor/lib/vendor.samsung.libcolor.hardware.so
+vendor/lib/vendor.samsung.libcolor.hdr10plus.so
+vendor/lib64/hw/hwcomposer.s5e9925.so
+vendor/lib64/hw/vulkan.samsung.so
+vendor/lib64/libacryl.so
+vendor/lib64/libdrmresource.so
+vendor/lib64/libexynosdisplay.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libion_exynos.so
+vendor/lib64/libSGPUOpenCL.so:vendor/lib64/libOpenCL.so;FIX_SONAME;TRYSRCFIRST
+vendor/lib64/vendor.samsung.libcolor.hardware.so
+vendor/lib64/vendor.samsung.libcolor.hdr10plus.so
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
