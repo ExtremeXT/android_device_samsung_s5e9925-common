@@ -30,6 +30,9 @@ bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.ccp.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=false
 
+# Codec2
+media.c2.hal.selection=aidl
+
 # Fastbootd
 ro.fastbootd.available=true
 
