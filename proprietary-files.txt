@@ -25,6 +25,16 @@ vendor/lib64/lib_SoundAlive_SRC384_ver320.so|26ef33d16f3a4f76891d8e5b4559f96ad0b
 vendor/lib64/lib_soundaliveresampler.so|4b8b33d7dcebaafa2cad79fe27caf91c4ea8a9b1
 vendor/lib64/libSamsungPostProcessConvertor.so|2c1a5325c85a15e3c27d6b985ae37dc809d01a13
 
+# DQE
+vendor/etc/dqe/DQE_coef_data.xml
+vendor/etc/dqe/calib_data_whitepoint.xml
+vendor/etc/dqe/calib_data_skincolor.xml
+vendor/etc/dqe/calib_data_rgbgain.xml
+vendor/etc/dqe/calib_data_eyetemp.xml
+vendor/etc/dqe/calib_data_colortemp.xml
+vendor/etc/dqe/calib_data_bypass.xml
+vendor/etc/dqe/calib_data_atc.xml
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
