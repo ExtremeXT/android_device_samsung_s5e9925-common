@@ -181,6 +181,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     bootable/deprecated-ota \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1/proxy
