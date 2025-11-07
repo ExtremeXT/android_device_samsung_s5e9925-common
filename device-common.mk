@@ -81,9 +81,13 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
+    frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
+    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio.low_latency.prebuilt.xml \
+    android.hardware.bluetooth_le.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml
 
 # Shipping API level
