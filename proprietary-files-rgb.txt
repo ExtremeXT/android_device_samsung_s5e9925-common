@@ -4,5 +4,17 @@
 # Audio
 vendor/lib64/lib_SoundBooster_ver1100.so
 
+# Camera
+vendor/lib64/libexynoscamera_cnr_plugin.so
+vendor/lib64/libexynoscamera_fakefusion_plugin.so
+vendor/lib64/libexynoscamera_fakefusion.so
+vendor/lib64/libexynoscamera_merta_plugin.so
+vendor/lib64/libexynoscamera_plugin_utils.so
+vendor/lib64/libexynoscamera_plugin.so
+vendor/lib64/libexynoscamera_ssl_plugin.so
+vendor/lib64/libexynoscamera_vpl_plugin.so
+vendor/lib64/libexynoscamera3.so
+vendor/lib64/libswcnr.so
+
 # TEEgris Firmware (latest)
 vendor/tee/00000000-0000-0000-0000-46494e474502:vendor/etc/tee_new/00000000-0000-0000-0000-46494e474502

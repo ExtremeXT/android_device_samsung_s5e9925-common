@@ -13,6 +13,16 @@ vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswspatializer.so
 
+# Camera
+vendor/lib64/hw/camera.s5e9925.so
+vendor/lib64/libeis_core.so
+vendor/lib64/libeis_interface.so
+vendor/lib64/libMERTA.so
+vendor/lib64/libsemseg.so
+vendor/lib64/libvdis_core.so
+vendor/lib64/libvdis_interface.so
+vendor/lib64/libvpl.so
+
 # DQE
 vendor/etc/dqe/calib_data_atc.xml
 vendor/etc/dqe/calib_data_colormode0.xml
