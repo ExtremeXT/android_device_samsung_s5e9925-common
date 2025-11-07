@@ -158,6 +158,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.full.prebuilt.xml \
     android.hardware.camera.raw.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml \
+    android.hardware.sensor.barometer.prebuilt.xml \
+    android.hardware.sensor.compass.prebuilt.xml \
+    android.hardware.sensor.gyroscope.prebuilt.xml \
+    android.hardware.sensor.hifi_sensors.prebuilt.xml \
+    android.hardware.sensor.light.prebuilt.xml \
+    android.hardware.sensor.proximity.prebuilt.xml \
+    android.hardware.sensor.stepcounter.prebuilt.xml \
+    android.hardware.sensor.stepdetector.prebuilt.xml \
     android.hardware.vulkan.compute-0.prebuilt.xml \
     android.hardware.vulkan.level-1.prebuilt.xml \
     android.hardware.vulkan.version-1_3.prebuilt.xml \
