@@ -21,6 +21,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     vndservicemanager
