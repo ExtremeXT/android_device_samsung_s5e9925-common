@@ -130,7 +130,11 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH) \
-	hardware/samsung
+	hardware/samsung \
+	hardware/samsung_slsi-linaro/codec2 \
+	hardware/samsung_slsi-linaro/exynos \
+	hardware/samsung_slsi-linaro/interfaces \
+	hardware/samsung_slsi-linaro/sgpu
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
