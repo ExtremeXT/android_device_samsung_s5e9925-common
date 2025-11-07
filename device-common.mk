@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# EPIC
+PRODUCT_PACKAGES += \
+	libepicoperator
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

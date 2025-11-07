@@ -47,6 +47,9 @@ vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libmyspace.so
 
+# EPIC
+vendor/lib64/libepic_helper.so
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
