@@ -61,6 +61,12 @@ $(call soong_config_set_bool,exynos_audio,use_usb_offload,true)
 $(call soong_config_set,exynos_audio,proxy_header,//$(LOCAL_PATH):audio_proxy_headers)
 $(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9925-common:libSamsungPostProcessConvertor)
 
+# Codec2
+PRODUCT_PACKAGES += \
+    media_codecs_c2.xml \
+    media_codecs_performance_c2.xml \
+    media_profiles_V1_0.xml
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
