@@ -95,6 +95,11 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# Memtrack
+vendor/bin/hw/android.hardware.memtrack-service.exynos
+vendor/etc/init/memtrack.rc:vendor/etc/init/android.hardware.memtrack-service.exynos.rc
+vendor/etc/vintf/manifest/memtrack.xml:vendor/etc/vintf/manifest/android.hardware.memtrack-service.exynos.xml
+
 # SoundTrigger
 product/etc/permissions/privapp-permissions-google-product.xml
 product/priv-app/HotwordEnrollmentOKGoogleEx4CORTEXM55/HotwordEnrollmentOKGoogleEx4CORTEXM55.apk
