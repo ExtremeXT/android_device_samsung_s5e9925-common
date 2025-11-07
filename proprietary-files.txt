@@ -61,6 +61,12 @@ vendor/etc/dqe/calib_data_colortemp.xml
 vendor/etc/dqe/calib_data_bypass.xml
 vendor/etc/dqe/calib_data_atc.xml
 
+# DRM (Widevine)
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/lib64/libwvhidl.so
+
 # ENN
 vendor/lib64/libenn_common_utils.so
 vendor/lib64/libenn_engine_lib.so
