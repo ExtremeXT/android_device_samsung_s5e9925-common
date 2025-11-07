@@ -18,6 +18,11 @@ vendor/lib64/lib_SoundAlive_SRC384_ver320.so|26ef33d16f3a4f76891d8e5b4559f96ad0b
 vendor/lib64/lib_soundaliveresampler.so|4b8b33d7dcebaafa2cad79fe27caf91c4ea8a9b1
 vendor/lib64/libSamsungPostProcessConvertor.so|2c1a5325c85a15e3c27d6b985ae37dc809d01a13
 
+# Codec2
+vendor/lib64/libImageFormatConverter.so
+vendor/lib64/librechdr10plus.plugin.so
+vendor/lib64/librechdr10plus.so
+
 # DQE
 vendor/etc/dqe/DQE_coef_data.xml
 vendor/etc/dqe/calib_data_whitepoint.xml

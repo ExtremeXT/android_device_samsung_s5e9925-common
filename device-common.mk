@@ -63,6 +63,16 @@ $(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9
 
 # Codec2
 PRODUCT_PACKAGES += \
+    samsung.hardware.media.c2-service \
+    libExynosC2Av1Dec \
+    libExynosC2H264Dec \
+    libExynosC2H264Enc \
+    libExynosC2HevcDec \
+    libExynosC2HevcEnc \
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc \
+    libExynosC2Vp9Dec \
+    libExynosC2Vp9Enc \
     media_codecs_c2.xml \
     media_codecs_performance_c2.xml \
     media_profiles_V1_0.xml
