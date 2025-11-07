@@ -32,6 +32,18 @@ vendor/etc/dqe/calib_data_eyetemp.xml
 vendor/etc/dqe/calib_data_colortemp.xml
 vendor/etc/dqe/calib_data_bypass.xml
 
+# ENN
+vendor/lib64/libenn_common_utils.so
+vendor/lib64/libenn_engine_lib.so
+vendor/lib64/libenn_model.so
+vendor/lib64/libenn_profiler.so
+vendor/lib64/libenn_public_api_cpp_lib.so
+vendor/lib64/libenn_user_driver_cpu.so
+vendor/lib64/libenn_user_driver_gpu_lib.so
+vendor/lib64/libenn_user_driver_unified.so
+vendor/lib64/libenn_user_lib.so
+vendor/lib64/vendor.samsung_slsi.hardware.enn@1.0.so
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
