@@ -90,6 +90,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libexynosdisplay.so',
         'vendor/lib/libExynosHWCService.so',
         'vendor/lib64/hw/hwcomposer.s5e9925.so',
+        'vendor/lib64/libeis_core.so',
         'vendor/lib64/libexynosdisplay.so',
         'vendor/lib64/libExynosHWCService.so',
     ): blob_fixup()
