@@ -85,6 +85,16 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_getId')
         .clear_symbol_version('AHardwareBuffer_getNativeHandle')
         .clear_symbol_version('AHardwareBuffer_release'),
+    (
+        'vendor/lib/hw/hwcomposer.s5e9925.so',
+        'vendor/lib/libexynosdisplay.so',
+        'vendor/lib/libExynosHWCService.so',
+        'vendor/lib64/hw/hwcomposer.s5e9925.so',
+        'vendor/lib64/libexynosdisplay.so',
+        'vendor/lib64/libExynosHWCService.so',
+    ): blob_fixup()
+        .add_needed('libutils-v32.so')
+        .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
