@@ -47,6 +47,11 @@ vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libmyspace.so
 
+# Codec2
+vendor/lib64/libImageFormatConverter.so
+vendor/lib64/librechdr10plus.plugin.so
+vendor/lib64/librechdr10plus.so
+
 # DQE
 vendor/etc/dqe/DQE_coef_data.xml
 vendor/etc/dqe/calib_data_whitepoint.xml
