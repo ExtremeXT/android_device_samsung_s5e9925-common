@@ -42,6 +42,16 @@ vendor/lib64/lib_lvacfs.so|0e68915914a09b13c9df6cecc278dac21594abb5
 vendor/lib64/librecordalive.so|f2815e3d363fc1bef3ffc6d39465a299284b96a0
 vendor/lib64/lib_SamsungRec_08020.so|f3143059edaa17a83d047508a8ff22a6fa770e92
 
+# DQE
+vendor/etc/dqe/DQE_coef_data.xml
+vendor/etc/dqe/calib_data_whitepoint.xml
+vendor/etc/dqe/calib_data_skincolor.xml
+vendor/etc/dqe/calib_data_rgbgain.xml
+vendor/etc/dqe/calib_data_eyetemp.xml
+vendor/etc/dqe/calib_data_colortemp.xml
+vendor/etc/dqe/calib_data_bypass.xml
+vendor/etc/dqe/calib_data_atc.xml
+
 # EPIC
 vendor/lib64/libepic_helper.so
 
