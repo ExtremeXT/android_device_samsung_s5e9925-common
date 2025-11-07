@@ -47,6 +47,30 @@ vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libmyspace.so
 
+# Camera
+vendor/lib64/libeis_core.so
+vendor/lib64/libexynoscamera_cnr_plugin.so
+vendor/lib64/libexynoscamera_fakefusion_plugin.so
+vendor/lib64/libexynoscamera_fakefusion.so
+vendor/lib64/libexynoscamera_plugin_utils.so
+vendor/lib64/libexynoscamera_plugin.so
+vendor/lib64/libexynosscaler.so
+vendor/lib64/libgiantmscl.so
+vendor/lib64/libhwjpeg.so
+vendor/lib64/libhwjsqz.so
+vendor/lib64/libIMUSensor.so
+vendor/lib64/libMERTA.so
+vendor/lib64/libmpbase.so
+vendor/lib64/libsemseg.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libswcnr.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+vendor/lib64/libvdis_core.so
+vendor/lib64/libvdis_interface.so
+vendor/lib64/libvpl.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+
 # Codec2
 vendor/lib64/libImageFormatConverter.so
 vendor/lib64/librechdr10plus.plugin.so
