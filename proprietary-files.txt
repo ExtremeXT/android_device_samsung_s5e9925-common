@@ -47,6 +47,16 @@ vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libmyspace.so
 
+# DQE
+vendor/etc/dqe/DQE_coef_data.xml
+vendor/etc/dqe/calib_data_whitepoint.xml
+vendor/etc/dqe/calib_data_skincolor.xml
+vendor/etc/dqe/calib_data_rgbgain.xml
+vendor/etc/dqe/calib_data_eyetemp.xml
+vendor/etc/dqe/calib_data_colortemp.xml
+vendor/etc/dqe/calib_data_bypass.xml
+vendor/etc/dqe/calib_data_atc.xml
+
 # EPIC
 vendor/lib64/libepic_helper.so
 
