@@ -1,6 +1,9 @@
 # All unpinned blobs are from S711BXXSHGZG1
 # Vendor security patch level 2026-07-01
 
+# Gatekeeper
+vendor/lib64/hw/gatekeeper.s5e9925.so
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
