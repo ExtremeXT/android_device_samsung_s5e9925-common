@@ -69,7 +69,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
     android.hardware.graphics.allocator@4.0-service-sgr \
-    android.hardware.graphics.mapper@4.0-impl-sgr
+    android.hardware.graphics.mapper@4.0-impl-sgr \
+	libdrm_sgpu
 
 # Health
 PRODUCT_PACKAGES += \
