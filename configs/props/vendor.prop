@@ -31,7 +31,15 @@ bluetooth.profile.ccp.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=false
 
 # Codec2
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2-poolmask=458752
+debug.stagefright.ccodec_delayed_params=1
+debug.stagefright.ccodec_lax_type=true
+debug.stagefright.ccodec_strict_type=true
+media.c2.dmabuf.padding=512
 media.c2.hal.selection=aidl
+ro.vendor.gpu.dataspace=1
+vendor.debug.c2.sbwc.enable=true
 
 # Fastbootd
 ro.fastbootd.available=true
