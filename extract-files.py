@@ -89,6 +89,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/egl/libGLESv2_samsung.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('ANativeWindow_getFormat'),
+    'vendor/lib64/libeis_core.so': blob_fixup()
+        .add_needed('libutils-v32.so')
+        .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
     (
         'vendor/lib64/libsensorlistener.so',
         'vendor/lib64/libvdis_core.so',
