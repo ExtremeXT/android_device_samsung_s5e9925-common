@@ -32,6 +32,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.fingerprint.rc",
+    relative_install_path: "init",
+    src: "init.fingerprint.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.samsung.rc",
     relative_install_path: "init",
     src: "init.samsung.rc",
