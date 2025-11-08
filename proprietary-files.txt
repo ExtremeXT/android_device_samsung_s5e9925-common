@@ -91,6 +91,32 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# RIL
+vendor/etc/init/init.baseband.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc
+vendor/etc/init/vendor.samsung.rild.rc
+vendor/etc/mtu-conf.xml
+vendor/lib64/libfloatingfeature.so
+vendor/lib64/libsecnativefeature.so
+
+# RIL (S921BXXU9CYI5)
+vendor/bin/hw/rild|560cf02e1090d2207af38598b4a20121333fdca3
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml|8a78a095378827de038b13e0470f6b43d60cf71a
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
+vendor/lib64/libril_sem.so|f472e6e480360ec25dec47fc9d503f42d153bc53
+vendor/lib64/libsec-ril.so|998ad2d44439286c9835bc40dce75141cad6f394
+vendor/lib64/libsecril-client.so|5492db9ef074c7e9a7bceb8ac9644fd8d32dc74f
+vendor/lib64/libsemnativecarrierfeature.so|98a7626528fdd41263239d0d93f316747ea8b712
+vendor/lib64/libVendorSemDataProps.so|a90e87724b4fee5b3bc741ccc35969c9bef8b62d
+vendor/lib64/libVendorSemTelephonyProps.so|ecd7b8d54ff08f45154d69860574e96bbb9dad8d
+vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|c2a5f4abeca898f143d08f42550e990224fa16e2
+vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|3aad42fc15ddf5467e784fa5503453db67c33e42
+vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|4a74fad71bb608db867db1a33db13e8343f27f8e
+vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|ffd603a5d0dad411f3f020833cd9a367b99e37c6
+vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|a3226f016f34667dbc7324a88db062aa9ff8069b
+vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|127aa91af345ed9e97e4549c5d19e079c25f6fbb
+
 # Sensors
 vendor/lib64/sensors.flicker.so
 
