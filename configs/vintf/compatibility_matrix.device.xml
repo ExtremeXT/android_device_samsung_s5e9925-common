@@ -1,5 +1,13 @@
 <compatibility-matrix version="1.0" type="framework">
     <hal format="aidl" optional="true">
+        <name>vendor.nxp.nxpnfc_aidl</name>
+        <version>1</version>
+        <interface>
+            <name>INxpNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.samsung_slsi.hardware.SbwcDecompService</name>
         <interface>
             <name>ISbwcDecompService</name>
