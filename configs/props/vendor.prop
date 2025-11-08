@@ -43,8 +43,17 @@ ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 vendor.media.omx=0
 
+# DRM
+drm.service.enabled=true
+
+# ENN
+log.tag.ENN=INFO
+
 # Fingerprint
 ro.vendor.fingerprint.force_calibrate=1
+
+# FRP
+ro.frp.pst=/dev/block/persistent
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
@@ -71,8 +80,17 @@ ro.surface_flinger.vsync_event_phase_offset_ns=0
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=0
 vendor.hwc.drm.device=/dev/dri/card1
 
+# Keystore
+ro.crypto.metadata_init_delete_all_keys.enabled=false
+ro.hardware.keystore_desede=true
+ro.hardware.keystore=mdfpp
+
 # Power
 vendor.powerhal.disp.idle_support=false
+
+# RIL
+ro.telephony.default_cdma_sub=0
+ro.vendor.epdg.support=true
 
 # Weaver
 vendor.s.securehw.available=false
