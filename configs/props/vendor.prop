@@ -40,12 +40,21 @@ media.c2.dmabuf.padding=512
 ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 
+# DRM
+drm.service.enabled=true
+
+# ENN
+log.tag.ENN=INFO
+
 # Fastbootd
 ro.fastbootd.available=true
 
 # Fingerprint
 ro.vendor.fingerprint.force_calibrate=1
 ro.vendor.fingerprint.type=udfps
+
+# FRP
+ro.frp.pst=/dev/block/persistent
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
@@ -70,8 +79,28 @@ ro.surface_flinger.vsync_event_phase_offset_ns=0
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=0
 vendor.hwc.exynos.vsync_mode=0
 
+# Keystore
+ro.crypto.metadata_init_delete_all_keys.enabled=false
+ro.hardware.keystore_desede=true
+ro.hardware.keystore=mdfpp
+ro.security.keystore.keytype=sakv2,gak,sgak
+
 # Power
 vendor.powerhal.disp.idle_support=false
+
+# Samsung
+ro.product_ship=true
+
+# RIL
+ro.debug_level=0x494d
+ro.radio.noril=no
+ro.telephony.default_cdma_sub=0
+ro.vendor.cscsupported=1
+ro.vendor.epdg.support=true
+
+# Weaver
+security.securehw.available=false
+security.securenvm.available=false
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
