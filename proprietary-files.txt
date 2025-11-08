@@ -66,6 +66,29 @@ vendor/etc/task_profiles.json
 vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libsynaFpSensorTestNwd.so
 
+# Firmware
+vendor/firmware/APSV_AUDIO_SLSI.bin
+vendor/firmware/bidirmic.bin
+vendor/firmware/default_configuration.flm.cfg.bin
+vendor/firmware/dolby.bin
+vendor/firmware/dsp_gkt.xml
+vendor/firmware/dsp_ivp_dm.bin
+vendor/firmware/dsp_ivp_pm.bin
+vendor/firmware/dsp_reloc_rules.bin
+vendor/firmware/libann.elf
+vendor/firmware/libgaussian3x3.elf
+vendor/firmware/libivp.elf
+vendor/firmware/liblog.elf
+vendor/firmware/libme_rta_pamir.elf
+vendor/firmware/libnn_af16wf16.elf
+vendor/firmware/libnn_sdma.elf
+vendor/firmware/libnn.elf
+vendor/firmware/listenbackeffect.bin
+vendor/firmware/OD_V3.4.3_08_31_QVGA_PAMIR_ENN_BGRA.nnc
+vendor/firmware/OD_V3.5.2_08_31_VGA_PAMIR_ENN_BGRA.nnc
+vendor/firmware/secure_configuration.flm.cfg.bin
+vendor/firmware/volumemonitor.bin
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 

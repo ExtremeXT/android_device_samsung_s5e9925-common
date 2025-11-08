@@ -33,6 +33,37 @@ vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libqfp_sensortest.so
 
+# Firmware
+vendor/firmware/a2dpcom.bin
+vendor/firmware/abox_tplg.bin
+vendor/firmware/abox_tplg.conf
+vendor/firmware/AIE.bin
+vendor/firmware/AP_AUDIO_SLSI.bin
+vendor/firmware/APBargeIn_AUDIO_SLSI.bin
+vendor/firmware/APBiBF_AUDIO_SLSI.bin
+vendor/firmware/APDV_AUDIO_SLSI.bin
+vendor/firmware/avsyncmix.bin
+vendor/firmware/Cal360.bin
+vendor/firmware/calliope_dram.bin
+vendor/firmware/calliope_sram.bin
+vendor/firmware/dax_param.bin
+vendor/firmware/icc_profile.bin
+vendor/firmware/is_lib.bin
+vendor/firmware/is_mcu_fw.bin
+vendor/firmware/is_rta.bin
+vendor/firmware/mfc_fw.bin
+vendor/firmware/mfc/mfc_fw_flash_s2miw04.bin
+vendor/firmware/mfc/mfc_fw_flash.bin
+vendor/firmware/rxse.bin
+vendor/firmware/sb_ll.bin
+vendor/firmware/sb_music.bin
+vendor/firmware/sb_others.bin
+vendor/firmware/sectiongraph_tplg.bin
+vendor/firmware/sectiongraph_tplg.conf
+vendor/firmware/txse1.bin
+vendor/firmware/txse2.bin
+vendor/firmware/vts.bin
+
 # GNSS
 vendor/bin/hw/gpsd
 vendor/etc/gnss/gps.cfg

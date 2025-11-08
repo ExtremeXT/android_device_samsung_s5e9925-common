@@ -16,6 +16,32 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libswcnr.so
 
+# Firmware
+vendor/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin
+vendor/firmware/cs35l40-bot-dsp1-spk-prot.bin
+vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw
+vendor/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin
+vendor/firmware/cs35l40-rcv-dsp1-spk-prot.bin
+vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw
+vendor/firmware/cs40l26-a2h.bin
+vendor/firmware/cs40l26-f0-wt1.bin
+vendor/firmware/cs40l26-f0-wt2.bin
+vendor/firmware/cs40l26-f0-wt3.bin
+vendor/firmware/cs40l26-f0.bin
+vendor/firmware/cs40l26-svc.bin
+vendor/firmware/cs40l26-svc1.bin
+vendor/firmware/cs40l26-svc2.bin
+vendor/firmware/cs40l26-svc3.bin
+vendor/firmware/cs40l26-wt1.bin
+vendor/firmware/cs40l26-wt2.bin
+vendor/firmware/cs40l26-wt3.bin
+vendor/firmware/cs40l26.bin
+vendor/firmware/cs40l26.wmfw
+vendor/firmware/leaudio_dec.bin
+vendor/firmware/leaudio_enc.bin
+vendor/firmware/sensorhub/shub_pamir_rainbow.bin
+vendor/firmware/vts_evt0.bin
+
 # NFC
 vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
 
