@@ -183,6 +183,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
+    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 PRODUCT_PACKAGES += \
@@ -214,6 +216,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vulkan.compute-0.prebuilt.xml \
     android.hardware.vulkan.level-1.prebuilt.xml \
     android.hardware.vulkan.version-1_3.prebuilt.xml \
+    android.hardware.wifi.direct.prebuilt.xml \
+    android.hardware.wifi.passpoint.prebuilt.xml \
+    android.hardware.wifi.prebuilt.xml \
+    android.software.ipsec_tunnels.prebuilt.xml \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml \
     android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml \
     com.nxp.mifare.prebuilt.xml
