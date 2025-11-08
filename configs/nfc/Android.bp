@@ -1,0 +1,30 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.nfc.samsung.rc",
+    relative_install_path: "init",
+    src: "init.nfc.samsung.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libese-nxp.conf",
+    src: "libese-nxp.conf",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libnfc-nxp.conf",
+    src: "libnfc-nxp.conf",
+    vendor: true,
+}
+
+prebuilt_root {
+    name: "libnfc-nxp_RF.conf",
+    src: "libnfc-nxp_RF.conf",
+    vendor: true,
+    install_in_root: true,
+}
