@@ -218,6 +218,10 @@ PRODUCT_PACKAGES += \
     thermal_info_config.json \
     thermal_symlinks
 
+# TSP
+PRODUCT_PACKAGES += \
+    init.tsp.rc
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
