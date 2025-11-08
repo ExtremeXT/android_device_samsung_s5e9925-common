@@ -27,6 +27,12 @@ vendor/lib64/libvpl.so
 vendor/etc/dqe/calib_data_atc.xml
 vendor/etc/dqe/calib_data_colormode0.xml
 
+# Fingerprint
+vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libqfp_sensortest.so
+
 # RAMDisk
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin:vendor_ramdisk/lib/firmware/sgpu/vangogh_lite_unified.bin

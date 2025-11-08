@@ -62,6 +62,10 @@ vendor/lib64/vendor.samsung_slsi.hardware.enn@1.0.so
 # EMS
 vendor/etc/task_profiles.json
 
+# Fingerprint
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
