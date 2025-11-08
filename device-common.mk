@@ -148,6 +148,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     public.libraries.txt
 
+# NFC
+PRODUCT_PACKAGES += \
+    init.nfc.samsung.rc \
+    libese-nxp.conf \
+    libnfc-nxp.conf \
+    libnfc-nxp_RF.conf
+
 # OTA
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
