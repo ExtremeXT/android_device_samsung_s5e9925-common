@@ -33,6 +33,12 @@ vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libqfp_sensortest.so
 
+# GNSS
+vendor/bin/hw/gpsd
+vendor/etc/gnss/gps.cfg
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
+
 # RAMDisk
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin:vendor_ramdisk/lib/firmware/sgpu/vangogh_lite_unified.bin
