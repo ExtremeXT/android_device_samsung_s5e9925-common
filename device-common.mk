@@ -215,6 +215,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vulkan.compute-0.prebuilt.xml \
     android.hardware.vulkan.level-1.prebuilt.xml \
     android.hardware.vulkan.version-1_3.prebuilt.xml \
+    android.hardware.wifi.direct.prebuilt.xml \
+    android.hardware.wifi.passpoint.prebuilt.xml \
+    android.hardware.wifi.prebuilt.xml \
+    android.software.ipsec_tunnels.prebuilt.xml \
     android.software.opengles.deqp.level-2021-03-01.prebuilt.xml \
     android.software.vulkan.deqp.level-2021-03-01.prebuilt.xml
 
