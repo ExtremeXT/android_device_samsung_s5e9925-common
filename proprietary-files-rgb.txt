@@ -1,2 +1,5 @@
 # All unpinned blobs are from the release mentioned in
 # device's proprietary-files.txt, unless pinned
+
+# TEEgris Firmware (latest)
+vendor/tee/00000000-0000-0000-0000-46494e474502:vendor/etc/tee_new/00000000-0000-0000-0000-46494e474502
