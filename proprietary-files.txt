@@ -148,6 +148,9 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# NFC
+vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
+
 # RIL
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilcommon.rc
