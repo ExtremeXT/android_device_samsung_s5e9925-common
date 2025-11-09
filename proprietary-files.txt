@@ -169,6 +169,9 @@ vendor/bin/hw/android.hardware.memtrack-service.exynos
 vendor/etc/init/memtrack.rc:vendor/etc/init/android.hardware.memtrack-service.exynos.rc
 vendor/etc/vintf/manifest/memtrack.xml:vendor/etc/vintf/manifest/android.hardware.memtrack-service.exynos.xml
 
+# NFC
+vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
+
 # RIL
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilcommon.rc
