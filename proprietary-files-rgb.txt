@@ -16,6 +16,9 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libswcnr.so
 
+# NFC
+vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
+
 # Sensors
 vendor/lib64/sensors.grip.so
 
