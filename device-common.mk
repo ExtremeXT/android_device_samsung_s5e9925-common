@@ -109,8 +109,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-sgr \
     android.hardware.graphics.mapper@4.0-impl-sgr \
-    android.hardware.graphics.composer@2.4-service \
-	libdrm_sgpu
+    android.hardware.graphics.composer@2.4-service
 
 # Health
 PRODUCT_PACKAGES += \
