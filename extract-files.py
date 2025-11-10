@@ -79,7 +79,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/vulkan.samsung.so',
         'vendor/lib64/libOpenCL.so',
     ): blob_fixup()
-        .add_needed('libdrm_sgpu.so')
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
