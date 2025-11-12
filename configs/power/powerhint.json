@@ -1,6 +1,63 @@
 {
     "Nodes": [
         {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
+            "Values": [
+                "1306000",
+                "1095000",
+                "605000",
+                "500000",
+                "303000",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "GPUMaxFreq",
+            "Path": "/sys/kernel/gpu/gpu_max_clock",
+            "Values": [
+                "1306000",
+                "1095000"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "EmsTuneReqMode",
+            "Path": "/sys/kernel/ems/emstune/req_mode",
+            "Values": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "Comments": [
+                "0 => High Mode",
+                "1 => Power-Scenario Mode",
+                "2 => Performance Mode",
+                "3 => Game Mode",
+                "4 => Balance Mode",
+                "5 => Camera Mode",
+                "6 => Normal Mode"
+            ],
+            "DefaultIndex": 6,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "Memboost",
+            "Path": "/sys/kernel/mm/vmscan/mem_boost_mode_system",
+            "Values": [
+                "0",
+                "2"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
             "Name": "TABoost",
             "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
             "Values": [
@@ -31,6 +88,30 @@
             "ResetOnInit": true
         },
         {
+            "Name": "LPMDisable",
+            "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "LPMDisableLevel",
+            "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control_level",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "Comments": [
+                "0 => CPD Block",
+                "1 => C2 Block"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
             "Name": "DoubleTapToWakeEnable",
             "Path": "/sys/class/sec/tsp/cmd",
             "Values": [
@@ -52,6 +133,18 @@
     ],
     "Actions": [
         {
+            "PowerHint": "GAME",
+            "Node": "EmsTuneReqMode",
+            "Duration": 0,
+            "Value": "3"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "Memboost",
+            "Duration": 2000,
+            "Value": "2"
+        },
+        {
             "PowerHint": "LAUNCH",
             "Node": "TABoost",
             "Duration": 1000,
@@ -68,6 +161,18 @@
             "Node": "GPUIfpoRuntimeControl",
             "Duration": 1000,
             "Value": "0"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LPMDisable",
+            "Duration": 3000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LPMDisableLevel",
+            "Duration": 3000,
+            "Value": "1"
         },
         {
             "PowerHint": "DOUBLE_TAP_TO_WAKE",
