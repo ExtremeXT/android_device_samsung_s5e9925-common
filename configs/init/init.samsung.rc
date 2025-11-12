@@ -158,7 +158,7 @@ on early-fs
     write /dev/blkio/normal/blkio.ssg.max_available_ratio 60
     write /dev/blkio/top/blkio.ssg.boost_on 1
 
-on post-fs
+on init
     # Permissions for HyPer
     chmod 0444 /sys/kernel/gpu/gpu_freq_table
     chmod 0644 /sys/kernel/gpu/gpu_governor
