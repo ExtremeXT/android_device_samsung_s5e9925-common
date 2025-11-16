@@ -25,6 +25,7 @@ namespace_imports = [
     'hardware/samsung',
     'hardware/samsung_slsi-linaro/codec2',
     'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/graphics',
     'hardware/samsung_slsi-linaro/interfaces',
     'hardware/samsung_slsi-linaro/sgpu',
     'vendor/samsung/s5e9925-common',
@@ -75,9 +76,7 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libhidltransport.so'),
     (
         'vendor/lib/hw/vulkan.samsung.so',
-        'vendor/lib/libOpenCL.so',
         'vendor/lib64/hw/vulkan.samsung.so',
-        'vendor/lib64/libOpenCL.so',
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
@@ -85,6 +84,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_getId')
         .clear_symbol_version('AHardwareBuffer_getNativeHandle')
         .clear_symbol_version('AHardwareBuffer_release'),
+    'vendor/lib64/libSGPUOpenCL.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_release'),
+    'vendor/lib64/egl/libGLESv2_samsung.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('ANativeWindow_getFormat'),
     (
         'vendor/lib/hw/hwcomposer.s5e9925.so',
         'vendor/lib/libexynosdisplay.so',

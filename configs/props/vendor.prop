@@ -39,6 +39,7 @@ debug.stagefright.ccodec_strict_type=true
 media.c2.dmabuf.padding=512
 ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
+vendor.media.omx=0
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -63,7 +64,6 @@ fs_mgr.overlayfs.prefer_cache_backing_storage=true
 ro.frp.pst=/dev/block/persistent
 
 # Graphics
-debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=0
 debug.sf.early.app.duration=16600000
 debug.sf.early.sf.duration=16600000
@@ -75,6 +75,7 @@ debug.sf.late.app.duration=16600000
 debug.sf.late.sf.duration=10500000
 debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.color_saturation=1.0
+vendor.hwc.drm.device=/dev/dri/card1
 ro.hardware.egl=samsung
 ro.hardware.vulkan=samsung
 ro.opengles.version=196610

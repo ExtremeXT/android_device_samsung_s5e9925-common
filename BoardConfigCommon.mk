@@ -111,7 +111,6 @@ TARGET_BOOTLOADER_BOARD_NAME := s5e9925
 TARGET_SOC := s5e9925
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
 
 # Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
@@ -153,6 +152,8 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/configs/vintf/compatibility_matrix.device.xml \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml
+
+include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
 
 # Call the proprietary setup
 include vendor/samsung/s5e9925-common/BoardConfigVendor.mk

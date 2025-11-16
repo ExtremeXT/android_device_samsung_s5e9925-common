@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/angle_default.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/angle_default.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -109,8 +109,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-sgr \
     android.hardware.graphics.mapper@4.0-impl-sgr \
-    android.hardware.graphics.composer@2.4-service \
+    android.hardware.composer.hwc3-service.slsi \
+    libion_exynos \
+    libexynosgraphicbuffer_public \
 	libdrm_sgpu
+
+# SBWC
+PRODUCT_PACKAGES += \
+    vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.exynos
 
 # Health
 PRODUCT_PACKAGES += \
@@ -295,6 +305,11 @@ $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
+
+# Call Samsung LSI board support package makefiles
+include hardware/samsung_slsi-linaro/config/BoardConfig9925.mk
+$(call inherit-product, hardware/samsung_slsi-linaro/graphics/base/hwcomposer_property.mk)
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
