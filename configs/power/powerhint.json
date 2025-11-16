@@ -44,7 +44,7 @@
                 "5 => Camera Mode",
                 "6 => Normal Mode"
             ],
-            "DefaultIndex": 6,
+            "DefaultIndex": 2,
             "ResetOnInit": true
         },
         {
@@ -136,7 +136,7 @@
             "PowerHint": "GAME",
             "Node": "EmsTuneReqMode",
             "Duration": 0,
-            "Value": "3"
+            "Value": "2"
         },
         {
             "PowerHint": "LAUNCH",
