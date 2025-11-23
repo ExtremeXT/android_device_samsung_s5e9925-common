@@ -150,14 +150,6 @@
             <!-- measured [71-73] lower-upper [18-195] median * 1.5 [108] -->
             <Limit name="measured-frame-rate-1920x1080" range="40-89" />
         </MediaCodec>
-        <MediaCodec name="c2.sec.mpeg4.decoder" type="video/mp4v-es" update="true">
-            <!-- measured [1297-1301] lower-upper [328-3494] median * 1.5 [1949] -->
-            <Limit name="measured-frame-rate-176x144" range="722-1588" />
-            <!-- measured [1095-1109] lower-upper [278-2964] median * 1.5 [1653] -->
-            <Limit name="measured-frame-rate-480x360" range="612-1347" />
-            <!-- measured [369-375] lower-upper [94-1002] median * 1.5 [559] -->
-            <Limit name="measured-frame-rate-1280x720" range="207-456" />
-        </MediaCodec>
     </Decoders>
     <Encoders>
         <MediaCodec name="c2.exynos.h264.encoder" type="video/avc" update="true">
