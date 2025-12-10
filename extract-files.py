@@ -61,10 +61,13 @@ blob_fixups: blob_fixups_user_type = {
             'android.hardware.security.keymint-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     (
+        'vendor/lib/hw/sound_trigger.primary.s5e9925.so',
         'vendor/lib/hw/audio.primary.s5e9925.so',
         'vendor/lib/libalsautils_sec.so',
         'vendor/lib/libaudioparamupdate.so',
         'vendor/lib/libaudioroute_samsung.so',
+        'vendor/lib/soundfx/libaudioeffectoffload.so'
+        'vendor/lib/libaboxpcmdump.so'
     ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute_samsung.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa_samsung.so'),

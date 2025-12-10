@@ -13,7 +13,7 @@ vendor/lib/lib_lvacfs.so
 vendor/lib/lib_SamsungRec_08020.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
-vendor/lib/libaboxpcmdump.so;DISABLE_CHECKELF
+vendor/lib/libaboxpcmdump.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudio-ril.so
 vendor/lib/libaudioparamupdate.so

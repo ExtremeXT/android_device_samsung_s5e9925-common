@@ -36,8 +36,8 @@
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
-                <mixPort name="fast output" role="source" flags="AUDIO_OUTPUT_FLAG_FAST">
-                    <profile name="fast_out" format="AUDIO_FORMAT_PCM_16_BIT"
+                <mixPort name="fast" role="source" flags="AUDIO_OUTPUT_FLAG_FAST">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
@@ -47,8 +47,8 @@
                 </mixPort>
 
                 <mixPort name="deep_buffer" role="source" flags="AUDIO_OUTPUT_FLAG_DEEP_BUFFER">
-                    <profile name="deep_out" format="AUDIO_FORMAT_PCM_8_24_BIT"
-                             samplingRates="8000 16000 32000 44100 48000"
+                    <profile name="" format="AUDIO_FORMAT_PCM_8_24_BIT"
+                             samplingRates="48000"
                              channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
@@ -93,21 +93,10 @@
                              channelMasks="AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/>
                 </mixPort>
 
-                <mixPort name="spatializer" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
-                    <profile name="sa" format="AUDIO_FORMAT_PCM_32_BIT"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </mixPort>
-
                 <!-- Capture(Input) Streams -->
                 <mixPort name="primary input" role="sink">
                     <profile name="primary_in" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 16000 32000 48000"
-                             channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
-                </mixPort>
-
-                <mixPort name="fast input" role="sink" flags="AUDIO_INPUT_FLAG_FAST">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
                 </mixPort>
 
@@ -144,30 +133,28 @@
 
             <routes>
                 <route type="mix" sink="Earpiece"
-                       sources="primary output,fast output,deep_buffer,mmap_no_irq_out"/>
+                       sources="primary output,fast,deep_buffer"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,fast output,deep_buffer,compressed_offload,mmap_no_irq_out,haptic,spatializer"/>
+                       sources="primary output,fast,deep_buffer,compressed_offload,mmap_no_irq_out,haptic"/>
 
                 <!-- USB Routes -->
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic,spatializer"/>
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic,spatializer"/>
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
 
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,fast output,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer,haptic"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,fast output,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer,haptic"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,fast output,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer,haptic"/>
 
                 <route type="mix" sink="HDMI"
                        sources="hdmi"/>
 
                 <route type="mix" sink="primary input"
                        sources="Built-In Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
-                <route type="mix" sink="fast input"
-                       sources="Built-In Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="mmap_no_irq_in"
                        sources="Built-In Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In"/>
