@@ -48,6 +48,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V3-ndk.so')
         .replace_needed('libcrypto.so', 'libcrypto-tm.so')
         .add_needed('libshim_crypto.so')
+        .add_needed('libbase_shim.so')
         .replace_needed('libkeymint.so', 'libskeymint.so')
         .replace_needed('lib_android_keymaster_keymint_utils.so',
             'lib_android_keymaster_skeymint_utils.so')
