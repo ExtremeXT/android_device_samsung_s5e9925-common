@@ -1,0 +1,5 @@
+on early-init
+    exec u:r:init:s0 root root -- /vendor/bin/tee.sh
+
+on fs && property:dev.teegris.model=new
+    mount none /vendor/etc/tee_new /vendor/tee bind
