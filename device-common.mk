@@ -72,6 +72,11 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_SOONG_NAMESPACES += \
 	$(LOCAL_PATH)
 
+# TEEgris
+PRODUCT_PACKAGES += \
+    init.s5e9925.tee.rc \
+    tee.sh
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
 
