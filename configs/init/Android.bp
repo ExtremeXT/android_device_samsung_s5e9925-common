@@ -45,3 +45,16 @@ prebuilt_etc {
     src: "ueventd.s5e9925.rc",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.s5e9925.tee.rc",
+    relative_install_path: "init",
+    src: "init.s5e9925.tee.rc",
+    vendor: true,
+}
+
+sh_binary {
+    name: "tee.sh",
+    src: "tee.sh",
+    vendor: true,
+}
