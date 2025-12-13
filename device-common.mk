@@ -76,6 +76,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     bootable/deprecated-ota
 
+# TEEgris
+PRODUCT_PACKAGES += \
+    init.s5e9925.tee.rc \
+    tee.sh
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
 

@@ -1,0 +1,11 @@
+service tee_script /vendor/bin/tee.sh
+    user root
+    group radio
+    oneshot
+    disabled
+
+on early-init
+    start tee_script
+
+on fs && property:vendor.teegris.new=true
+    mount none /vendor/etc/tee_new /vendor/tee bind
