@@ -291,6 +291,10 @@ PRODUCT_PACKAGES += \
     init.tsp.rc \
     vendor.lineage.touch-service.samsung
 
+PRODUCT_PACKAGES += \
+    init.s5e9925.tee.rc \
+    tee.sh
+
 
 # USB
 PRODUCT_PACKAGES += \
