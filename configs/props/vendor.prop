@@ -55,7 +55,10 @@ ro.fastbootd.available=true
 
 # Fingerprint
 ro.vendor.fingerprint.force_calibrate=1
-ro.vendor.fingerprint.type=udfps
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.request_touch_event=true
+
+debug.fdsan=warn_once
 
 # FSMGR
 fs_mgr.overlayfs.prefer_cache_backing_storage=true

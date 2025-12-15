@@ -72,9 +72,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung
+    android.hardware.camera.provider-service.samsung \
+    libshim_camera
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -170,16 +172,16 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.samsung-exynos
 
 # NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
-    android.hardware.secure_element-service.nxp \
-    com.android.nfc_extras \
-    libchrome.vendor \
-    Tag \
-    init.nfc.samsung.rc \
-    libese-nxp.conf \
-    libnfc-nxp.conf \
-    libnfc-nxp_RF.conf
+# PRODUCT_PACKAGES += \
+#     android.hardware.nfc-service.nxp \
+#     android.hardware.secure_element-service.nxp \
+#     com.android.nfc_extras \
+#     libchrome.vendor \
+#     Tag \
+#     init.nfc.samsung.rc \
+#     libese-nxp.conf \
+#     libnfc-nxp.conf \
+#     libnfc-nxp_RF.conf
 
 # OTA
 AB_OTA_UPDATER := false
@@ -193,9 +195,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
-    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.satellite.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
@@ -212,8 +211,6 @@ PRODUCT_PACKAGES += \
     android.hardware.fingerprint.prebuilt.xml \
     android.hardware.hardware_keystore_V3.xml \
     android.hardware.location.gps.prebuilt.xml \
-    android.hardware.nfc.hce.prebuilt.xml \
-    android.hardware.nfc.prebuilt.xml \
     android.hardware.se.omapi.ese.prebuilt.xml \
     android.hardware.se.omapi.uicc.prebuilt.xml \
     android.hardware.sensor.barometer.prebuilt.xml \
@@ -291,9 +288,9 @@ PRODUCT_PACKAGES += \
     init.tsp.rc \
     vendor.lineage.touch-service.samsung
 
-PRODUCT_PACKAGES += \
-    init.s5e9925.tee.rc \
-    tee.sh
+# PRODUCT_PACKAGES += \
+#     init.s5e9925.tee.rc \
+#     tee.sh
 
 
 # USB
@@ -303,6 +300,10 @@ PRODUCT_PACKAGES += \
     init.s5e9925.usb.rc
 
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
+
+# Configstore
+PRODUCT_PACKAGES += \
+    init.debug.rc
 
 # Vibrator
 PRODUCT_PACKAGES += \

@@ -4,13 +4,9 @@
 
 # Audio
 vendor/etc/audio_board_info.xml
-vendor/etc/LVACFS_Calibration.dat
-vendor/etc/LVACFS_Configuration.txt
-vendor/etc/LVACFS_ControlParams.txt
 vendor/lib/hw/audio.primary.s5e9925.so
 vendor/lib/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
-vendor/lib/lib_lvacfs.so
-vendor/lib/lib_SamsungRec_08020.so
+vendor/lib/lib_SamsungRec_07020.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
@@ -38,7 +34,7 @@ vendor/etc/SoundBoosterParam.txt
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib/lib_SoundAlive_play_plus_ver800.so
-vendor/lib/lib_SoundBooster_ver1100.so
+vendor/lib/lib_SoundBooster_ver2000.so
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libspatializerparamstorage.so
@@ -49,18 +45,13 @@ vendor/lib/soundfx/libmyspace.so
 
 # Camera
 vendor/lib64/libeis_core.so
-vendor/lib64/libexynoscamera_cnr_plugin.so
-vendor/lib64/libexynoscamera_fakefusion_plugin.so
-vendor/lib64/libexynoscamera_fakefusion.so
-vendor/lib64/libexynoscamera_plugin_utils.so
-vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libhwjsqz.so
 vendor/lib64/libIMUSensor.so
 vendor/lib64/libMERTA.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libsemseg.so
 vendor/lib64/libsensorlistener.so
-vendor/lib64/libswcnr.so
+#vendor/lib64/libswcnr.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvdis_core.so
@@ -129,12 +120,6 @@ vendor/firmware/APSV_AUDIO_SLSI.bin
 vendor/firmware/avsyncmix.bin
 vendor/firmware/bidirmic.bin
 vendor/firmware/calliope_dram.bin
-vendor/firmware/cs40l26-a2h.bin
-vendor/firmware/cs40l26-svc.bin
-vendor/firmware/cs40l26-svc1.bin
-vendor/firmware/cs40l26-svc2.bin
-vendor/firmware/cs40l26-svc3.bin
-vendor/firmware/cs40l26.wmfw
 vendor/firmware/dax_param.bin
 vendor/firmware/default_configuration.flm.cfg.bin
 vendor/firmware/dolby.bin
@@ -143,8 +128,6 @@ vendor/firmware/dsp_ivp_dm.bin
 vendor/firmware/dsp_ivp_pm.bin
 vendor/firmware/dsp_reloc_rules.bin
 vendor/firmware/icc_profile.bin
-vendor/firmware/leaudio_dec.bin
-vendor/firmware/leaudio_enc.bin
 vendor/firmware/libann.elf
 vendor/firmware/libgaussian3x3.elf
 vendor/firmware/libivp.elf
@@ -217,7 +200,7 @@ vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
 # NFC
-vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
+#vendor/firmware/nfc/libsn220u_fw.so:vendor/lib64/libsn220u_fw.so
 
 # RIL
 vendor/etc/init/init.baseband.rc
@@ -278,7 +261,7 @@ vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
 vendor/etc/secnvm/k250a_47000301_0.img
-vendor/etc/secnvm/k250a_47000305_c.img
+vendor/etc/secnvm/k250a_47000304_c.img
 vendor/etc/secnvm/k250a_47000306_1.img
 vendor/firmware/secnvm/k250a_fw_image.manifest
 vendor/lib64/libhermes_bdbridge.so
