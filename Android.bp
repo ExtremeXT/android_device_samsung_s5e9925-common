@@ -8,3 +8,10 @@ soong_namespace {
         "vendor/samsung/s5e9925-common"
 	],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_camera_interface",
+    interfaces: [
+        "vendor.samsung.hardware.camera.provider@4.0::ISehCameraProvider",
+    ],
+}

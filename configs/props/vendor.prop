@@ -64,7 +64,7 @@ debug.fdsan=warn_once
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 # FRP
-ro.frp.pst=/dev/block/persistent
+#ro.frp.pst=
 
 # Graphics
 debug.renderengine.backend=skiavkthreaded

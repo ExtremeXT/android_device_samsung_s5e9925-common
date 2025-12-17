@@ -72,11 +72,16 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    libshim_camera
+    libshim_camera \
+    libshim_camera1
 
-$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+#$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
+#$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+
+# UDFPS
+#$(call soong_config_set,samsungUdfpsVars,dim_layer_zorder,0xff)
+$(call soong_config_set,samsungUdfpsVars,udfps_zorder,0xff)
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
 
 # Doze
 PRODUCT_PACKAGES += \

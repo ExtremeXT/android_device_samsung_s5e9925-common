@@ -124,6 +124,14 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace(
             '0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
             '0E 40 F9 E1 03 16 AA 82 0c 80 52 03 00 80 D2'),
+     ('vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so',
+      'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so',
+      'vendor/lib64/camera.device@3.2-impl.so',
+      'vendor/lib64/camera.device@3.4-impl.so'): blob_fixup()
+        .add_needed('libshim_camera1.so'),
+
+     'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so': blob_fixup()
+        .add_needed('libshim_camera.so'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):

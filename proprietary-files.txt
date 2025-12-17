@@ -59,10 +59,25 @@ vendor/lib64/libvdis_interface.so
 vendor/lib64/libvpl.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
+vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
+vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
+vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+
 vendor/lib64/libtriplepreview_interface.so
 vendor/lib64/libtriplecapture_interface.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
+vendor/lib64/libsmartfocus_interface.so
+vendor/lib64/libarcsoft_object_tracking.so
+vendor/lib64/libai_denoiser_interface.so
 
 # Codec2
 vendor/lib64/libImageFormatConverter.so
