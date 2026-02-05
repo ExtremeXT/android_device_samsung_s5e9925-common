@@ -1,0 +1,5 @@
+prebuilt_etc {
+    name: "haptic_feedback_constants.xml",
+    src: "haptic_feedback_constants.xml",
+    vendor: true,
+}

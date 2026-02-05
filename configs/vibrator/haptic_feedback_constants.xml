@@ -1,0 +1,30 @@
+<haptic-feedback-constants>
+    <constant id="21">
+        <vibration-effect>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="click" />
+        </vibration-effect>
+    </constant>
+    <constant id="22">
+        <vibration-effect>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="low_tick" scale="0"/>
+            <primitive-effect name="click" />
+        </vibration-effect>
+    </constant>
+</haptic-feedback-constants>
