@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
 
 # Codec2
 PRODUCT_PACKAGES += \
-    samsung.hardware.media.c2@1.2-service \
+    samsung.hardware.media.c2-service \
     libExynosC2H264Dec \
     libExynosC2H264Enc \
     libExynosC2HevcDec \
@@ -65,10 +65,6 @@ PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
     media_codecs_performance_c2.xml \
     media_profiles_V1_0.xml
-
-PRODUCT_PACKAGES += \
-    codec2.vendor.base.policy \
-    codec2.vendor.ext.policy
 
 # Camera
 PRODUCT_PACKAGES += \

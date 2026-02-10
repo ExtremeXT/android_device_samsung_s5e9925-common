@@ -36,10 +36,12 @@ debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec_delayed_params=1
 debug.stagefright.ccodec_lax_type=true
 debug.stagefright.ccodec_strict_type=true
+debug.stagefright.c2-poolmask=458752
 media.c2.dmabuf.padding=512
 ro.vendor.gpu.dataspace=1
 vendor.debug.c2.sbwc.enable=true
 vendor.media.omx=0
+media.c2.hal.selection=aidl
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -94,6 +96,8 @@ ro.surface_flinger.set_display_power_timer_ms=200
 vendor.hwc.exynos.vsync_mode=0
 debug.sf.treat_170m_as_sRGB=1
 ro.surface_flinger.supports_background_blur=true
+#persist.sys.sf.native_mode=2
+ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Keystore
 ro.crypto.metadata_init_delete_all_keys.enabled=false

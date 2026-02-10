@@ -67,8 +67,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libalsautils_sec.so',
         'vendor/lib/libaudioparamupdate.so',
         'vendor/lib/libaudioroute_samsung.so',
-        'vendor/lib/soundfx/libaudioeffectoffload.so'
-        'vendor/lib/libaboxpcmdump.so'
+        'vendor/lib/soundfx/libaudioeffectoffload.so',
+        'vendor/lib/libaboxpcmdump.so',
     ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute_samsung.so')
         .replace_needed('libtinyalsa.so', 'libtinyalsa_samsung.so'),
@@ -94,6 +94,14 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_getNativeHandle')
         .clear_symbol_version('AHardwareBuffer_release'),
     'vendor/lib64/egl/libGLESv2_samsung.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('ANativeWindow_getFormat'),
+    'vendor/lib/libSGPUOpenCL.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_release'),
+    'vendor/lib/egl/libGLESv2_samsung.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('ANativeWindow_getFormat'),
     (

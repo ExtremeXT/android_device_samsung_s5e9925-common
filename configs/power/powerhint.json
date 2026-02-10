@@ -169,13 +169,13 @@
             "Node": "MemFreq",
             "Duration": 0,
             "Value": "3172000"
-        },
+        },/*
         {
             "PowerHint": "LAUNCH",
             "Node": "Memboost",
             "Duration": 2000,
             "Value": "2"
-        },
+        },*/
         {
             "PowerHint": "INTERACTION",
             "Node": "GPUMinFreq",
