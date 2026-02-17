@@ -39,6 +39,8 @@ vendor/lib64/hw/gatekeeper.s5e9925.so
 # Graphics
 vendor/etc/hdr_samsung_mx.key
 vendor/lib64/hw/vulkan.samsung.so
+vendor/lib64/vendor.samsung.libcolor.hardware.so
+vendor/lib64/vendor.samsung.libcolor.hdr10plus.so
 vendor/etc/Khronos/OpenCL/samsung.icd;SYMLINK=vendor/Khronos/OpenCL/vendors/samsung.icd
 vendor/lib64/egl/libEGL_samsung.so
 vendor/lib64/egl/libGLESv1_CM_samsung.so
