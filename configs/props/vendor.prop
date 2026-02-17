@@ -34,6 +34,7 @@ bluetooth.profile.vcp.controller.enabled=false
 ro.hardware.egl=samsung
 ro.hardware.vulkan=samsung
 ro.opengles.version=196610
+vendor.hwc.drm.device=/dev/dri/card1
 
 # Weaver
 vendor.s.securehw.available=false
