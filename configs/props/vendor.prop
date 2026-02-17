@@ -30,6 +30,11 @@ bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.ccp.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=false
 
+# Graphics
+ro.hardware.egl=samsung
+ro.hardware.vulkan=samsung
+ro.opengles.version=196610
+
 # Weaver
 vendor.s.securehw.available=false
 vendor.s.securenvm.available=false
