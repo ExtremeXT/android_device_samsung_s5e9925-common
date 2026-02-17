@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
