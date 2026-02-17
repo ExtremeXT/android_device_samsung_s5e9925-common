@@ -170,6 +170,15 @@ PRODUCT_PACKAGES += \
     libnfc-nxp_RF.conf
 endif
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayCommon \
+    LineageSDKOverlayCommon \
+    SettingsOverlayCommon \
+    SystemUIOverlayCommon
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # OTA
 AB_OTA_UPDATER := false
 
