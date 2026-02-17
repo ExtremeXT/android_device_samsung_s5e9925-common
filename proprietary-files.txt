@@ -36,6 +36,16 @@ vendor/etc/dqe/calib_data_atc.xml
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.s5e9925.so
 
+# Graphics
+vendor/etc/hdr_samsung_mx.key
+vendor/lib64/hw/vulkan.samsung.so
+vendor/etc/Khronos/OpenCL/samsung.icd;SYMLINK=vendor/Khronos/OpenCL/vendors/samsung.icd
+vendor/lib64/egl/libEGL_samsung.so
+vendor/lib64/egl/libGLESv1_CM_samsung.so
+vendor/lib64/egl/libGLESv2_samsung.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libSGPUOpenCL.so
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
