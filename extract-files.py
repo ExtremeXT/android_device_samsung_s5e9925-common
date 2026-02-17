@@ -74,6 +74,21 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libaudioproxy2.so': blob_fixup()
         .sig_replace('34 C1 00 94 E8 0C 80 52', '34 C1 00 94 08 00 80 52')
         .sig_replace('73 35 65 38 38 33 35 00', '73 35 65 39 39 32 35 00'),
+    'vendor/lib64/hw/vulkan.samsung.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getId')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_release'),
+    'vendor/lib64/libSGPUOpenCL.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_getNativeHandle')
+        .clear_symbol_version('AHardwareBuffer_release'),
+    'vendor/lib64/egl/libGLESv2_samsung.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('ANativeWindow_getFormat'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
