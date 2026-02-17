@@ -93,11 +93,6 @@
                              channelMasks="AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/>
                 </mixPort>
 
-                <mixPort name="spatializer" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
-                    <profile name="sa" format="AUDIO_FORMAT_PCM_32_BIT"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </mixPort>
-
                 <!-- Capture(Input) Streams -->
                 <mixPort name="primary input" role="sink">
                     <profile name="primary_in" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -146,13 +141,13 @@
                 <route type="mix" sink="Earpiece"
                        sources="primary output,fast output,deep_buffer,mmap_no_irq_out"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,fast output,deep_buffer,compressed_offload,mmap_no_irq_out,haptic,spatializer"/>
+                       sources="primary output,fast output,deep_buffer,compressed_offload,mmap_no_irq_out,haptic"/>
 
                 <!-- USB Routes -->
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic,spatializer"/>
+                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic,spatializer"/>
+                       sources="primary output,fast output,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
 
                 <route type="mix" sink="BT SCO"
                        sources="primary output,fast output,deep_buffer,haptic"/>
