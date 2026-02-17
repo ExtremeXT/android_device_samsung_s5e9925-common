@@ -71,7 +71,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-sgr \
     android.hardware.graphics.mapper@4.0-impl-sgr \
     android.hardware.memtrack-service.exynos \
-	libdrm_sgpu
+	libdrm_sgpu \
+    vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service
 
 # Health
 PRODUCT_PACKAGES += \
