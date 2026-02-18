@@ -57,7 +57,7 @@ ro.vendor.fingerprint.force_calibrate=1
 ro.vendor.fingerprint.type=udfps
 
 # FRP
-ro.frp.pst=/dev/block/persistent
+ro.frp.pst=/dev/block/by-name/persistent
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
