@@ -53,7 +53,7 @@ log.tag.ENN=INFO
 ro.vendor.fingerprint.force_calibrate=1
 
 # FRP
-ro.frp.pst=/dev/block/persistent
+ro.frp.pst=/dev/block/by-name/persistent
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
