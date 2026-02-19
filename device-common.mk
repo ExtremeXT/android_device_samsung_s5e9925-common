@@ -172,7 +172,8 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayCommon \
     LineageSDKOverlayCommon \
     SettingsOverlayCommon \
-    SystemUIOverlayCommon
+    SystemUIOverlayCommon \
+    WiFiOverlayCommon
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
