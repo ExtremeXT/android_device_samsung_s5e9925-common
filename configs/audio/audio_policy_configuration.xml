@@ -75,11 +75,6 @@
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
 
-                <mixPort name="haptic" role="source">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO_HAPTIC_A"/>
-                </mixPort>
-
                 <mixPort name="direct output" role="source"
                          flags="AUDIO_OUTPUT_FLAG_DIRECT">
                     <profile name="direct_out" format="AUDIO_FORMAT_PCM_16_BIT"
@@ -135,20 +130,20 @@
                 <route type="mix" sink="Earpiece"
                        sources="primary output,fast,deep_buffer"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,fast,deep_buffer,compressed_offload,mmap_no_irq_out,haptic"/>
+                       sources="primary output,fast,deep_buffer,compressed_offload,mmap_no_irq_out"/>
 
                 <!-- USB Routes -->
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback,haptic"/>
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback"/>
 
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,fast,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,fast,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,fast,deep_buffer,haptic"/>
+                       sources="primary output,fast,deep_buffer"/>
 
                 <route type="mix" sink="HDMI"
                        sources="hdmi"/>
