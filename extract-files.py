@@ -106,6 +106,10 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace(
             '0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
             '0E 40 F9 E1 03 16 AA 82 0c 80 52 03 00 80 D2'),
+    'vendor/lib64/libgraphgen_ann_import_s.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):

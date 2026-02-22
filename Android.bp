@@ -8,3 +8,10 @@ soong_namespace {
         "vendor/samsung/s5e9925-common"
 	],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_slsi_enn_interface",
+    interfaces: [
+        "vendor.samsung_slsi.hardware.enn@1.0::IEnnInterface",
+    ],
+}

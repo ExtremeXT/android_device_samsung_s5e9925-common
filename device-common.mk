@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# ENN
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks-service-enn
+
 # EPIC
 PRODUCT_PACKAGES += \
 	libepicoperator
