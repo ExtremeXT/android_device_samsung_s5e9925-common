@@ -86,6 +86,10 @@ $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
 
+# ENN
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks-service-enn
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

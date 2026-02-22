@@ -14,4 +14,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung_slsi.hardware.enn</name>
+        <version>1.0</version>
+        <interface>
+            <name>IEnnInterface</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
