@@ -13,3 +13,10 @@ cc_library_headers {
     name: "audio_proxy_headers",
     export_include_dirs: ["include"],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_slsi_enn_interface",
+    interfaces: [
+        "vendor.samsung_slsi.hardware.enn@1.0::IEnnInterface",
+    ],
+}
