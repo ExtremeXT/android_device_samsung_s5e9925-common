@@ -43,11 +43,22 @@ PRODUCT_PACKAGES += \
     audio_effects.xml \
     audio_policy_configuration.xml \
     audio.bluetooth.default \
+    audio.primary.s5e9925 \
     audio.r_submix.default \
     audio.usbv2.default \
     bluetooth_with_le_audio_policy_configuration_7_0.xml
 
 TARGET_EXCLUDES_AUDIOFX := true
+
+$(call soong_config_set_bool,exynos_audio,support_direct_multi_channel_stream,true)
+$(call soong_config_set_bool,exynos_audio,use_camcorder_quad_mic,true)
+$(call soong_config_set_bool,exynos_audio,use_offload_effect_library,true)
+$(call soong_config_set_bool,exynos_audio,use_quad_mic,true)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_samsungrecord,true)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_support_gamechat_spk_aec,true)
+$(call soong_config_set_bool,exynos_audio,use_usb_offload,true)
+$(call soong_config_set,exynos_audio,proxy_header,//$(LOCAL_PATH):audio_proxy_headers)
+$(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/s5e9925-common:libSamsungPostProcessConvertor)
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -96,7 +107,9 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    bootable/deprecated-ota
+    bootable/deprecated-ota \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1 \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1/proxy
 
 # TEEgris
 PRODUCT_PACKAGES += \
