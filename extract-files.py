@@ -59,21 +59,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so',
             'android.hardware.security.keymint-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
-    (
-        'vendor/lib64/hw/audio.primary.s5e9925.so',
-        'vendor/lib64/hw/sound_trigger.primary.s5e9925.so',
-        'vendor/lib64/libaboxpcmdump.so',
-        'vendor/lib64/libalsautils_sec.so',
-        'vendor/lib64/libaudioparamupdate.so',
-        'vendor/lib64/libaudioproxy2.so',
-        'vendor/lib64/libaudioroute_samsung.so',
-        'vendor/lib64/soundfx/libaudioeffectoffload.so',
-    ): blob_fixup()
-        .replace_needed('libaudioroute.so', 'libaudioroute_samsung.so')
-        .replace_needed('libtinyalsa.so', 'libtinyalsa_samsung.so'),
-    'vendor/lib64/libaudioproxy2.so': blob_fixup()
-        .sig_replace('34 C1 00 94 E8 0C 80 52', '34 C1 00 94 08 00 80 52')
-        .sig_replace('73 35 65 38 38 33 35 00', '73 35 65 39 39 32 35 00'),
     'vendor/lib64/hw/vulkan.samsung.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_acquire')
         .clear_symbol_version('AHardwareBuffer_allocate')
