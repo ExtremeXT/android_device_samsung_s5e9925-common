@@ -241,6 +241,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensor.stepcounter.prebuilt.xml \
     android.hardware.sensor.stepdetector.prebuilt.xml \
     android.hardware.telephony.gsm.prebuilt.xml \
+    android.hardware.telephony.ims.prebuilt.xml \
     android.hardware.usb.accessory.prebuilt.xml \
     android.hardware.usb.host.prebuilt.xml \
     android.hardware.vulkan.compute-0.prebuilt.xml \
@@ -322,6 +323,20 @@ $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
+
+PRODUCT_PACKAGES += \
+    Iwlan \
+    QualifiedNetworksService \
+    PhhIms \
+    TelephonyOverlayCommon
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/privapp-permissions-me.phh.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-me.phh.ims.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.allow_ims_off=1
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)
