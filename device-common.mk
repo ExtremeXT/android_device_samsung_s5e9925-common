@@ -328,7 +328,8 @@ PRODUCT_PACKAGES += \
     Iwlan \
     QualifiedNetworksService \
     PhhIms \
-    TelephonyOverlayCommon
+    TelephonyOverlayCommon \
+    CarrierConfigOverlayCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/privapp-permissions-me.phh.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-me.phh.ims.xml
