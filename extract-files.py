@@ -4,14 +4,21 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import tempfile
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
+    run_cmd,
 )
 
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
+)
+from extract_utils.tools import (
+    DEFAULT_PATCHELF_VERSION,
+    patchelf_version_path_map,
 )
 
 namespace_imports = [
@@ -21,6 +28,28 @@ namespace_imports = [
     'hardware/samsung_slsi-linaro/sgpu',
     'vendor/samsung/s5e9925-common',
 ]
+
+
+def rename_dynamic_symbol(
+    _ctx: BlobFixupCtx,
+    _file: File,
+    file_path: str,
+    old_name: str,
+    new_name: str,
+    **_kwargs,
+):
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8') as tmp:
+        tmp.write(f'{old_name} {new_name}')
+        tmp.flush()
+        run_cmd(
+            [
+                patchelf_version_path_map[DEFAULT_PATCHELF_VERSION],
+                '--rename-dynamic-symbols',
+                tmp.name,
+                file_path,
+            ]
+        )
+
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hermesd': blob_fixup()
@@ -47,6 +76,14 @@ blob_fixups: blob_fixups_user_type = {
             'lib_android_keymaster_skeymint_utils.so')
         .replace_needed('libkeymaster_portable.so',
             'libkeymaster_portable.samsung.so'),
+    (
+        'vendor/lib64/libskeymint10device.so',
+        'vendor/lib64/libskeymint_cli.so',
+    ): blob_fixup()
+        .call(rename_dynamic_symbol, 'OPENSSL_sk_new_null', 'sk_new_null')
+        .call(rename_dynamic_symbol, 'OPENSSL_sk_num', 'sk_num')
+        .call(rename_dynamic_symbol, 'OPENSSL_sk_push', 'sk_push')
+        .call(rename_dynamic_symbol, 'OPENSSL_sk_value', 'sk_value'),
     'vendor/etc/init/android.hardware.security.keymint-service.samsung.rc': blob_fixup()
         .regex_replace('-service', '-service.samsung'),
     'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so': blob_fixup()
