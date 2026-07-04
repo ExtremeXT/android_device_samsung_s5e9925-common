@@ -14,7 +14,7 @@
          based on the hardware -->
     <!-- An Array of "[ConnectivityManager connectionType],
                       [# simultaneous connection types]"  -->
-    <string-array translatable="false" name="radioAttributes">
+    <string-array name="radioAttributes" translatable="false">
         <item>"1,1"</item>
         <item>"0,1"</item>
         <item>"7,1"</item>
@@ -64,7 +64,7 @@
 
          Note that doze dreams are not subject to the same start conditions as ordinary dreams.
          Doze dreams will run whenever the power manager is in a dozing state. -->
-    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
     <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
@@ -155,6 +155,17 @@
         <item>250</item>
     </integer-array>
 
+    <!-- Flag specifying whether VoLTE is available on device -->
+    <bool name="config_device_volte_available">true</bool>
+
+    <!-- Flag specifying whether VoLTE should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_volte_available">true</bool>
+
+    <!-- Flag specifying whether VT is available on device -->
+    <bool name="config_device_vt_available">true</bool>
+
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
 
@@ -165,7 +176,7 @@
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
     <!-- Default files to pin via Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+    <string-array name="config_defaultPinnerServiceFiles" translatable="false">
         <item>"/system/framework/framework.jar"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
@@ -200,19 +211,11 @@
 
     <!-- The type of the light sensor to be used by the display framework for things like
          auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
-    <string name="config_displayLightSensorType">com.samsung.sensor.autobrightness</string>
+    <string name="config_displayLightSensorType" translatable="false">com.samsung.sensor.autobrightness</string>
 
     <!-- Whether the device enable the standalone (SA) mode of 5G NR.-->
     <bool name="config_telephony5gStandalone">true</bool>
 
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
-
-    <bool name="config_carrier_volte_available">true</bool>
-    <bool name="config_device_volte_available">true</bool>
-    <bool name="config_device_vt_available">true</bool>
-    <string name="config_wlan_data_service_package">com.google.android.iwlan</string>
-    <string name="config_wlan_network_service_package">com.google.android.iwlan</string>
-    <string name="config_qualified_networks_service_package">com.android.telephony.qns</string>
-
 </resources>

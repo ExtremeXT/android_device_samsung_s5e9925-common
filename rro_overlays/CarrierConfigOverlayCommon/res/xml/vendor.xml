@@ -78,6 +78,15 @@
         </string-array>
         <boolean name="satellite_ignore_data_roaming_setting_bool" value="true" />
     </carrier_config>
+    <carrier_config mcc="001">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_volte_tty_supported_bool" value="false" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
+        <boolean name="vilte_data_is_metered_bool" value="false" />
+        <boolean name="carrier_supports_ss_over_ut_bool" value="true" />
+    </carrier_config>
     <carrier_config mcc="001" mnc="01">
         <string-array name="allowed_initial_attach_apn_types_string_array" num="5">
             <item value="ia" />

@@ -45,10 +45,8 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>android.hardware.graphics.allocator</name>
-        <transport>hwbinder</transport>
-        <version>4.0</version>
         <interface>
             <name>IAllocator</name>
             <instance>default</instance>
