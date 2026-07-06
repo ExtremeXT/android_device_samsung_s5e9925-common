@@ -377,3 +377,6 @@
 #
 # ] Permissions for Vibrator
 #
+
+# UWB
+/dev/srxxx    0660 uwb uwb
