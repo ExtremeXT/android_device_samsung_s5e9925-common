@@ -945,3 +945,8 @@ on boot
     chmod 771 /efs/usb_hw_param
     chown radio system /efs/usb_hw_param
     chown system system /efs/usb_hw_param/usb_hw_param.log
+
+on fs
+    # ISunlightEnhancement
+    chown system system /sys/class/mdnie/mdnie/lux
+    chmod 0644 /sys/class/mdnie/mdnie/lux
