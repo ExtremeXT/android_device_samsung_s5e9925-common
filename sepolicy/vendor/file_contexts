@@ -104,13 +104,11 @@
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                                      u:object_r:sysfs_wakeup:s0
 
 ## Vendor Services
-/(vendor|system/vendor)/bin/epic                                                                   u:object_r:epicd_exec:s0
 /(vendor|system/vendor)/bin/hw/gps.sh                                                              u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hermesd                                                                u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service         u:object_r:hal_keymaster_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc[0-9]?-service\.nxp                           u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element-service\.nxp                      u:object_r:hal_secure_element_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.health-service\.samsung                            u:object_r:hal_lineage_health_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.SbwcDecompService@1\.0-service      u:object_r:hal_sbwcdecomp_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.epic-service                        u:object_r:hal_vendor_epic_service_default_exec:s0
-/(vendor|system/vendor)/bin/hw/samsung\.hardware\.media\.c2-service                                u:object_r:mediacodec_exec:s0
+
+/vendor/bin/hw/android\.hardware\.graphics\.allocator-service-sgr  u:object_r:hal_graphics_allocator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.graphics\.composer3-service.exynos    u:object_r:hal_graphics_composer_default_exec:s0

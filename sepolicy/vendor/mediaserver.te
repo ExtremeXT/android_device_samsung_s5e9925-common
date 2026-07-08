@@ -1,2 +1,0 @@
-allow mediaserver hal_sbwcdecomp_default:binder call;
-allow mediaserver hal_sbwcdecomp_hwservice:hwservice_manager find;

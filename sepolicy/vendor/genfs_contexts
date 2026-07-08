@@ -20,22 +20,25 @@ genfscon sysfs /bbd/lk_enable                                                   
 genfscon sysfs /bbd/lk_timeout                                                         u:object_r:sysfs_bbd_writable:s0
 
 # Battery
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0057/power_supply/pca9468-charger/type                                        u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0063/power_supply/sm5451-charger/type                                         u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-charger/type                      u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-otg/type                          u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type                  u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/2-0066/max77705-usbc/type                                                       u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10580000.hsi2c/i2c-1/1-003b/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/10580000.hsi2c/i2c-9/9-003b/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/ac/type                             u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/type                        u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/pogo/type                           u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/usb/type                            u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/wireless/type                       u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type  u:object_r:sysfs_battery:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_en                    u:object_r:sysfs_battery_writable:s0
-genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_stop_capacity         u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/11070000.hsi2c/i2c-5/5-0057/power_supply/pca9481-charger/type                                          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/11070000.hsi2c/i2c-5/5-0066/max77775-charger/power_supply/max77775-charger/type			u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/11070000.hsi2c/i2c-5/5-0066/max77775-charger/power_supply/max77775-otg/type                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/11070000.hsi2c/i2c-5/5-0066/max77775-fuelgauge/power_supply/max77775-fuelgauge/type			u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/141a0000.hsi2c/i2c-15/15-0038/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type    u:object_r:sysfs_battery:s0
+
+
+genfscon sysfs /devices/virtual/dqe             u:object_r:sysfs_vendor_display:s0
+genfscon sysfs /devices/platform/22200000.sgpu  u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/exynos-drm     u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video6/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video7/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video8/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video9/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video10/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video11/name   u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/virtual/sec_vib_inputff/control/use_sep_index u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/system/chip-id/evt_ver	u:object_r:sysfs_chip_id:s0
 
 # Chip id
 genfscon sysfs /devices/system/chip-id/revision                                        u:object_r:sysfs_chipid:s0
@@ -102,14 +105,6 @@ genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                     
 genfscon sysfs /devices/virtual/sensors/flip_cover_detector_sensor/nfc_cover_status    u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                         u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                u:object_r:sysfs_sensors_writable:s0
-
-# V4L
-genfscon sysfs /devices/platform/mfc/video4linux/video6/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/mfc/video4linux/video7/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/mfc/video4linux/video8/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/mfc/video4linux/video9/name                           u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/mfc/video4linux/video10/name                          u:object_r:sysfs_v4l:s0
-genfscon sysfs /devices/platform/mfc/video4linux/video11/name                          u:object_r:sysfs_v4l:s0
 
 # USB
 genfscon sysfs /devices/platform/10e00000.usb/udc/10e00000.usb/current_speed           u:object_r:sysfs_usb:s0

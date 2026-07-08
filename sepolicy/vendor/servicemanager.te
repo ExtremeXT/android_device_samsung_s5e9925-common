@@ -1,2 +1,1 @@
 allow servicemanager hal_power_default:binder call;
-allow servicemanager hal_vendor_epic_service_default:binder { call transfer };

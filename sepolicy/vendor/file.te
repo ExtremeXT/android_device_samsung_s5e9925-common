@@ -5,6 +5,7 @@ type nfc_vendor_data_file, file_type, data_file_type;
 # efs types
 type cpdebug_efs_file, file_type;
 type ssm_efs_file, file_type;
+type keymaster_efs_file, fs_type;
 
 # Audio
 type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
@@ -33,6 +34,8 @@ type sysfs_input_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mem_boost_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
 type sysfs_scsi_host, sysfs_type, rw_fs_type, fs_type;
+type sysfs_vendor_display, sysfs_type, rw_fs_type, fs_type;
+type sysfs_chip_id, sysfs_type, fs_type;
 
 # NPU version
 type sysfs_npu_version, sysfs_type, r_fs_type, fs_type;
