@@ -1,0 +1,10 @@
+get_prop(hal_keymaster_default, vendor_tztsdaemon_prop);
+
+binder_call(hal_keymaster_default, hal_keymaster_default);
+
+teegris_use(hal_keymaster_default);
+
+r_dir_file(hal_keymaster_default, prov_efs_file);
+
+# Allow keymaster HAL to read/write ssp_device
+allow hal_keymaster_default ssp_device:chr_file rw_file_perms;

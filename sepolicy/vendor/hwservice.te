@@ -1,0 +1,5 @@
+# A2DP Offload
+type hal_vendor_a2dpoffload_hwservice, hwservice_manager_type;
+
+# SBWC
+type hal_sbwcdecomp_hwservice, hwservice_manager_type;

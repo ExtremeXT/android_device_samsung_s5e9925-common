@@ -1,0 +1,2 @@
+# service.te
+type vendor_hal_nxpnfc_service,          hal_service_type, service_manager_type;

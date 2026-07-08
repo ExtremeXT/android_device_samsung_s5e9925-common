@@ -1,0 +1,3 @@
+get_prop(hal_gatekeeper_default, vendor_tztsdaemon_prop);
+
+teegris_use(hal_gatekeeper_default);

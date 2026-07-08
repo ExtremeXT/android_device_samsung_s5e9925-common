@@ -1,0 +1,17 @@
+allow kernel self:capability { mknod sys_admin };
+allow kernel self:perf_event cpu;
+dontaudit kernel self:capability { dac_override dac_read_search };
+
+allow kernel block_device:dir search;
+allow kernel device:dir { add_name create write remove_name rmdir };
+allow kernel device:chr_file { create setattr getattr unlink };
+dontaudit kernel device:blk_file create;
+
+allow kernel sysfs_sensors:dir search;
+allow kernel sysfs_sensors_writable:file open;
+
+r_dir_file(kernel, efs_file);
+allow kernel app_efs_file:dir create_dir_perms;
+allow kernel app_efs_file:file create_file_perms;
+
+r_dir_file(kernel, sysfs_sec_key);

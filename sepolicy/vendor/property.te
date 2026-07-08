@@ -1,0 +1,21 @@
+# Bluetooth
+vendor_internal_prop(vendor_bluetooth_prop)
+
+# Camera
+vendor_internal_prop(vendor_camera_prop)
+
+# Hermesd
+vendor_internal_prop(vendor_securehw_prop)
+vendor_internal_prop(vendor_securenvm_prop)
+
+# NFC
+vendor_internal_prop(vendor_sec_nfc_prop)
+
+# PowerHal
+vendor_internal_prop(vendor_power_prop)
+
+# Secure Element
+vendor_internal_prop(vendor_sehal_init_prop)
+
+# Wlan
+vendor_internal_prop(vendor_wlan_prop)

@@ -1,0 +1,23 @@
+type hermesd, domain;
+type hermesd_exec, exec_type, file_type, vendor_file_type;
+
+hal_server_domain(hermesd, hal_weaver)
+hal_server_domain(hermesd, hal_gatekeeper)
+
+init_daemon_domain(hermesd)
+unix_socket_connect(hermesd, property, init)
+
+# Allow hermesd to access k250a device
+allow hermesd k250a_device:chr_file rw_file_perms;
+
+# Allow hermesd HAL to read/write ssp_device
+allow hermesd ssp_device:chr_file rw_file_perms;
+
+# Allow hermesd to access tee tz_user_device
+allow hermesd tz_user_device:chr_file rw_file_perms;
+
+allow hermesd self:capability2 wake_alarm;
+
+get_prop(hermesd, vendor_tztsdaemon_prop)
+set_prop(hermesd, vendor_securenvm_prop)
+set_prop(hermesd, vendor_securehw_prop)

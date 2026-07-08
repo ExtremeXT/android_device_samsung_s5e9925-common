@@ -1,0 +1,115 @@
+## Proc
+genfscon proc /sys/vm/swappiness                                                       u:object_r:proc_swappiness:s0
+genfscon proc /sys/vm/dirty_bytes                                                      u:object_r:proc_dirty_bytes:s0
+genfscon proc /sys/vm/dirty_background_bytes                                           u:object_r:proc_dirty_background_bytes:s0
+genfscon proc /sys/kernel/sched_util_est_clamp                                         u:object_r:proc_sched:s0
+
+## Sysfs
+# ds_detect
+genfscon sysfs /devices/platform/cpif/sim/ds_detect	                                   u:object_r:sysfs_sim_writable:s0
+
+# Audio
+genfscon sysfs /devices/virtual/cirrus/cirrus_bd                                       u:object_r:vendor_sysfs_cirrus_cal:s0
+genfscon sysfs /devices/virtual/cirrus/cirrus_cal                                      u:object_r:vendor_sysfs_cirrus_cal:s0
+
+# Bluetooth
+genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill2/state                        u:object_r:sysfs_bt_writable:s0
+
+# Bbd
+genfscon sysfs /bbd/lk_enable                                                          u:object_r:sysfs_bbd_writable:s0
+genfscon sysfs /bbd/lk_timeout                                                         u:object_r:sysfs_bbd_writable:s0
+
+# Battery
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0057/power_supply/pca9468-charger/type                                        u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0063/power_supply/sm5451-charger/type                                         u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-charger/type                      u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-otg/type                          u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type                  u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/2-0066/max77705-usbc/type                                                       u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10580000.hsi2c/i2c-1/1-003b/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/10580000.hsi2c/i2c-9/9-003b/power_supply/mfc-charger/type                                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/ac/type                             u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/type                        u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/pogo/type                           u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/usb/type                            u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/wireless/type                       u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type  u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_en                    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_stop_capacity         u:object_r:sysfs_battery_writable:s0
+
+# Chip id
+genfscon sysfs /devices/system/chip-id/revision                                        u:object_r:sysfs_chipid:s0
+
+# Decon
+genfscon sysfs /devices/platform/19f00000.decon_0/psr_info                             u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19f00000.decon_0/vsync                                u:object_r:sysfs_decon_writable:s0
+genfscon sysfs /devices/platform/19f02000.decon_2/vsync                                u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19f03000.decon_3/vsync                                u:object_r:sysfs_decon:s0
+genfscon sysfs /devices/platform/19f00000.decon_0/hiber_exit                           u:object_r:sysfs_decon:s0
+
+# Displayport
+genfscon sysfs /devices/platform/10ab0000.displayport/extcon/extcon0/cable.0/state     u:object_r:sysfs_displayport_writable:s0
+
+# EMS
+genfscon sysfs /kernel/ems/emstune/aio_tuner                                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup0/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup4/uclamp_max                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup4/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup7/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup7/uclamp_max                                                 u:object_r:ems_file:s0
+genfscon sysfs /devices/platform/exynos-migov/migov/running                                                  u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/set_margin                                             u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/fragutil_thr                                           u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/control_profile                                        u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/interactive/current_mode  u:object_r:ems_file:s0
+
+# GPU
+genfscon sysfs /devices/platform/18500000.mali/dma_buf_gpu_mem                         u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/18500000.mali/total_gpu_mem                           u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/18500000.mali/kprcs                                   u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_poweroff_delay                                          u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_freq_table                                              u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_max_clock                                               u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_mm_min_clock                                            u:object_r:sysfs_gpu:s0
+
+# GPS
+genfscon sysfs /devices/virtual/sec/gps/GPS_PWR_EN/value                               u:object_r:sysfs_gps_writable:s0
+
+# LCD
+genfscon sysfs /devices/platform/panel_drv_0/lcd/panel/cell_id                         u:object_r:sysfs_lcd_writable:s0
+
+# power HAL
+genfscon sysfs /kernel/ems/emstune/req_mode                                                  u:object_r:sysfs_power_writable:s0
+genfscon sysfs /kernel/ems/emstune/req_mode_level                                            u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ucc/cstate_control                              u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ucc/cstate_control_level                        u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ufc/cpufreq_max_limit                           u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ufc/cpufreq_min_limit                           u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/18500000.mali/power_policy                                  u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min  u:object_r:sysfs_power_writable:s0
+
+# mem_boost
+genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                        u:object_r:sysfs_mem_boost_writable:s0
+
+# NPU
+genfscon sysfs /devices/platform/npu_exynos/version                                    u:object_r:sysfs_npu_version:s0
+
+# Storage
+genfscon sysfs /devices/platform/13100000.ufs/host0                                    u:object_r:sysfs_scsi_host:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                            u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/flip_cover_detector_sensor/nfc_cover_status    u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                         u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                u:object_r:sysfs_sensors_writable:s0
+
+# V4L
+genfscon sysfs /devices/platform/mfc/video4linux/video6/name                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video7/name                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video8/name                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video9/name                           u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video10/name                          u:object_r:sysfs_v4l:s0
+genfscon sysfs /devices/platform/mfc/video4linux/video11/name                          u:object_r:sysfs_v4l:s0
+
+# USB
+genfscon sysfs /devices/platform/10e00000.usb/udc/10e00000.usb/current_speed           u:object_r:sysfs_usb:s0

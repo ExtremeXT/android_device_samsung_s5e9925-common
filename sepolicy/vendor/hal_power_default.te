@@ -1,0 +1,7 @@
+allow hal_power_default pm_qos_device:chr_file rw_file_perms;
+allow hal_power_default fwk_stats_service:service_manager find;
+allow hal_power_default sysfs_battery:dir search;
+allow hal_power_default sysfs_battery_writable:file rw_file_perms;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, vendor_power_prop)

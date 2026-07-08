@@ -1,0 +1,38 @@
+# data types
+type mediadrm_vendor_data_file, file_type, data_file_type;
+type nfc_vendor_data_file, file_type, data_file_type;
+
+# efs types
+type cpdebug_efs_file, file_type;
+type ssm_efs_file, file_type;
+
+# Audio
+type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
+
+# proc types
+type proc_swappiness, fs_type, proc_type;
+type proc_dirty_background_bytes, fs_type, proc_type;
+type proc_dirty_bytes, fs_type, proc_type;
+
+# Power
+type ems_file, fs_type, sysfs_type;
+type migov_file, fs_type, sysfs_type;
+
+# sysfs types
+type sysfs_abox_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_bbd_writable, sysfs_type, fs_type;
+type sysfs_block, sysfs_type, r_fs_type, fs_type;
+type sysfs_block_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_camera, sysfs_type, r_fs_type, fs_type;
+type sysfs_camera_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_chipid, sysfs_type, r_fs_type, fs_type;
+type sysfs_decon, sysfs_type, r_fs_type, fs_type;
+type sysfs_decon_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_displayport_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_input_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_mem_boost_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+type sysfs_scsi_host, sysfs_type, rw_fs_type, fs_type;
+
+# NPU version
+type sysfs_npu_version, sysfs_type, r_fs_type, fs_type;

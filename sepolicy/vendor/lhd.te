@@ -1,0 +1,5 @@
+allow lhd sysfs_sensors_writable:file rw_file_perms;
+allow lhd sysfs_bbd_writable:file rw_file_perms;
+
+binder_call(lhd, servicemanager)
+wakelock_use(lhd)

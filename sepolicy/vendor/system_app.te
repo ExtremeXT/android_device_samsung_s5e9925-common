@@ -1,0 +1,2 @@
+allow system_app sysfs_lcd_writable:dir r_dir_perms;
+allow system_app sysfs_lcd_writable:file rw_file_perms;

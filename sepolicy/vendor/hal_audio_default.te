@@ -1,0 +1,22 @@
+allow hal_audio_default vts_fio_device:chr_file rw_file_perms;
+
+allow hal_audio_default efs_file:dir search;
+r_dir_file(hal_audio_default, imei_efs_file);
+r_dir_file(hal_audio_default, sec_efs_file);
+
+# Allow audio HAL to read/write vendor_sysfs_cirrus_cal
+allow hal_audio_default vendor_sysfs_cirrus_cal:dir r_dir_perms;
+allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
+
+allow hal_audio_default rild:unix_stream_socket connectto;
+allow hal_audio_default self:netlink_kobject_uevent_socket { bind create read setopt getopt };
+
+# Allow audio HAL to find hal_vendor_a2dpoffload_hwservice
+allow hal_audio_default hal_vendor_a2dpoffload_hwservice:hwservice_manager find;
+
+# Allow audio HAL to read/write sysfs_abox_writable
+allow hal_audio_default sysfs_abox_writable:file rw_file_perms;
+
+get_prop(hal_audio_default, vendor_radio_prop);
+
+wakelock_use(hal_audio_default);

@@ -1,0 +1,3 @@
+allow surfaceflinger hal_sbwcdecomp_default:binder call;
+allow surfaceflinger hal_sbwcdecomp_hwservice:hwservice_manager find;
+get_prop(surfaceflinger, vendor_hwc_prop)

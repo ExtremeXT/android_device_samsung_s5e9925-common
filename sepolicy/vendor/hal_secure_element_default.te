@@ -1,0 +1,10 @@
+# hal_secure_element_default.te
+
+hal_client_domain(hal_secure_element_default, hal_nfc)
+
+allow hal_secure_element_default hal_nfc_service:service_manager find;
+
+# Allow secure element HAL to access sem_device
+allow hal_secure_element_default secure_element_device:chr_file rw_file_perms;
+
+set_prop(hal_secure_element_default, vendor_sehal_init_prop)

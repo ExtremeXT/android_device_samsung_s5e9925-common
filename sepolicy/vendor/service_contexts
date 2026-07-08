@@ -1,0 +1,3 @@
+# service_contexts
+vendor.samsung_slsi.hardware.epic.IEpicRequest/default    u:object_r:hal_vendor_epic_service:s0
+vendor.nxp.nxpnfc_aidl.INxpNfc/default                    u:object_r:vendor_hal_nxpnfc_service:s0
