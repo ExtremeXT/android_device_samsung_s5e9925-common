@@ -4,6 +4,6 @@
 # Users cannot flash the required (One UI 7) firmware anymore, hence we have to dynamically select the proper firmware blobs. 
 # We cannot use ro.bootloader as it comes from the old sboot.bin, but we can check in "radio".
 # If they don't, a system property will be set which will be used later to bind mount the correct TEEgris folder.
-if ! strings /dev/block/by-name/radio | grep -q FYI3; then
-    setprop dev.teegris.model new
+if ! strings /dev/block/sda17 | grep -q FYI3; then
+    setprop vendor.teegris.new true
 fi

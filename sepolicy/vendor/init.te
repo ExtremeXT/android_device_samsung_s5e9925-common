@@ -1,0 +1,15 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow init boot_block_device:lnk_file relabelto;
+allow init efs_file:dir mounton;
+allow init mnt_vendor_file:dir mounton;
+allow init per_boot_file:file ioctl;
+allow init ram_device:blk_file write;
+allow init self:capability sys_nice;
+allow init socket_device:sock_file { create setattr unlink };
+allow init sysfs_block_writable:file rw_file_perms;
+allow init sysfs_ufs:file r_file_perms;
+allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };

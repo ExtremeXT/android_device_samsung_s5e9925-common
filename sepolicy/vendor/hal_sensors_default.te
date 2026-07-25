@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_sensors_default app_efs_file:file create_file_perms;
+allow hal_sensors_default efs_file:file r_file_perms;
+allow hal_sensors_default log_vendor_data_file:dir search;
+allow hal_sensors_default range_sensor_device:chr_file rw_file_perms;
+allow hal_sensors_default sysfs:dir r_dir_perms;

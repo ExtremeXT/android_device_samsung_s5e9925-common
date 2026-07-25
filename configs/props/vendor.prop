@@ -52,15 +52,9 @@ drm.service.enabled=true
 # ENN
 log.tag.ENN=INFO
 
-# Fastbootd
-ro.fastbootd.available=true
-
 # Fingerprint
 ro.vendor.fingerprint.force_calibrate=1
 ro.vendor.fingerprint.type=udfps
-
-# FSMGR
-fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 # FRP
 ro.frp.pst=/dev/block/by-name/persistent
@@ -112,8 +106,8 @@ ro.telephony.default_cdma_sub=0
 ro.vendor.epdg.support=true
 
 # Weaver
-security.securehw.available=false
-security.securenvm.available=false
+vendor.s.securehw.available=false
+vendor.s.securenvm.available=false
 
 # ZRAM
 ro.zram.mark_idle_delay_mins=60

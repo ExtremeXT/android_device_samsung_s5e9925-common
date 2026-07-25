@@ -1,0 +1,57 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Bluetooth
+genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                      u:object_r:sysfs_bt_writable:s0
+
+# Camera
+genfscon sysfs /devices/virtual/camera/flash/rear_flash          u:object_r:sysfs_camera_writable:s0
+genfscon sysfs /devices/virtual/camera/rear/fw_update                                           u:object_r:sysfs_camera_writable:s0
+
+# GPS
+genfscon sysfs /devices/system/chip-id/evt_ver                                                              u:object_r:sysfs_gps_chipid:s0
+genfscon sysfs /devices/soc0/machine                                                              u:object_r:sysfs_gps_chipid:s0
+genfscon sysfs /devices/soc0/revision                                                              u:object_r:sysfs_gps_chipid:s0
+
+# Graphics
+genfscon sysfs /devices/platform/19f00000.drmdecon/hiber_exit                                               u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/16e00000.sgpu                                                              u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/exynos-drm                                                                 u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/virtual/dqe                                                                         u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/mem_info                                                                         u:object_r:sysfs_gpu:s0
+
+# Health
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-7/7-0066/max77705-charger/power_supply/max77705-charger/type           u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type           u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-7/7-0066/max77705-charger/power_supply/max77705-otg/type           u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-14/14-005b/power_supply/mfc-charger/type           u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-7/7-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type           u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-7/7-0057/power_supply/pca9468-charger/type          u:object_r:sysfs_battery:s0 
+
+# Misc
+genfscon proc /cpu_capacity_fixup_target                                                                u:object_r:proc_sched:s0
+
+# Power
+genfscon sysfs /devices/platform/11d40000.spi/spi_master/spi2/spi2.0/input/input11/enabled                                                          u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min      u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/ems/emstune/req_level                                                                    u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/ems/emstune/req_mode                                                                    u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ucc/cstate_control                                                          u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/exynos-ufcc/ucc/cstate_control_level                                                          u:object_r:sysfs_power_writable:s0
+genfscon sysfs /kernel/gpu/gpu_ifpo_runtime_control                                                          u:object_r:sysfs_power_writable:s0
+genfscon sysfs /kernel/gpu/gpu_max_clock                                                                    u:object_r:sysfs_power_writable:s0
+genfscon sysfs /kernel/mm/vmscan/am_app_launch                                                          u:object_r:sysfs_power_writable:s0
+genfscon sysfs /kernel/mm/vmscan/mem_boost_mode_system                                                          u:object_r:sysfs_power_writable:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                                     u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                                 u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/flip_cover_detector_sensor/nfc_cover_status         u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                              u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /sys/class/sensors/range_sensor                                              u:object_r:sysfs_sensors_writable:s0
+
+# UFS
+genfscon sysfs /devices/platform/11100000.ufs/host0/target0:0:0/0:0:0:0/block/sda/mq/0/nr_tags              u:object_r:sysfs_ufs:s0
+genfscon sysfs /devices/platform/11100000.ufs/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes   u:object_r:sysfs_block_writable:s0

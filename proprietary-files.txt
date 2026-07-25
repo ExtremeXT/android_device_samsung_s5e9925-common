@@ -66,11 +66,8 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/libwvhidl.so
 
 # ENN
-vendor/bin/hw/vendor.samsung_slsi.hardware.enn@1.0-service
 vendor/etc/enn/custom_mode_config.json
 vendor/etc/enn/enn_mcd_kernel_64.bin
-vendor/etc/init/vendor.samsung_slsi.hardware.enn@1.0-lazy-service.rc
-vendor/etc/vintf/manifest/vendor.samsung_slsi.hardware.enn@1.0-service.xml
 vendor/lib64/libcommon_graphgen_export.so
 vendor/lib64/libcommon.so
 vendor/lib64/libcrane_compiler.so

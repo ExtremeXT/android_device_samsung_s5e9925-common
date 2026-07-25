@@ -160,14 +160,6 @@ on early-fs
 
 on init
     # Permissions for HyPer
-    chmod 0444 /sys/kernel/gpu/gpu_freq_table
-    chmod 0644 /sys/kernel/gpu/gpu_governor
-    chmod 0644 /sys/kernel/gpu/gpu_max_clock
-    chmod 0644 /sys/kernel/gpu/gpu_min_clock
-    chmod 0664 /sys/kernel/gpu/gpu_cl_boost_disable
-    chmod 444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
-    chmod 664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_max
-    chmod 664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
     chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
     chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_max
     chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
@@ -176,6 +168,14 @@ on init
     chown system system /sys/kernel/gpu/gpu_governor
     chown system system /sys/kernel/gpu/gpu_max_clock
     chown system system /sys/kernel/gpu/gpu_min_clock
+    chmod 0444 /sys/kernel/gpu/gpu_freq_table
+    chmod 0644 /sys/kernel/gpu/gpu_governor
+    chmod 0664 /sys/kernel/gpu/gpu_max_clock
+    chmod 0664 /sys/kernel/gpu/gpu_min_clock
+    chmod 0664 /sys/kernel/gpu/gpu_cl_boost_disable
+    chmod 444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
+    chmod 664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_max
+    chmod 664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
 
     # Permissions for input_booster
     chmod 0664 /sys/class/input_booster/ib_mode_state
@@ -202,9 +202,6 @@ on post-fs-data
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
 
-    # rtts dir
-    mkdir /efs/rtts 0775 system system
-
 on boot
     # cpu_capacity_fixup_target
     chmod 0660 /proc/cpu_capacity_fixup_target
@@ -213,10 +210,6 @@ on boot
 
     # Tweak background writeout
     write /proc/sys/vm/dirty_expire_centisecs 200
-
-    # VM dirty thresh setting
-    write /proc/sys/vm/dirty_background_bytes 26214400
-    write /proc/sys/vm/dirty_bytes 104857600
 
     # kswapd_mode
     chmod 0664 /sys/kernel/mm/vmscan/mem_boost_mode_kswapd

@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_wifi_default self:capability sys_module;
+set_prop(hal_wifi_default, vendor_wifi_version_prop)

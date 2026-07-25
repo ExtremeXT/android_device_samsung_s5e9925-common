@@ -1,0 +1,8 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_gnss_default fwk_sensor_service:service_manager find;
+allow hal_gnss_default gpsd:unix_stream_socket connectto;
+allow hal_gnss_default sysfs_gps_chipid:file r_file_perms;

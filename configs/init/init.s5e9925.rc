@@ -85,6 +85,9 @@ on init
     chown system system /sys/kernel/ems/ego/coregroup7/uclamp_monitor_len
     chown system system /sys/kernel/ems/gsc/min_admit_ns
 
+    chmod 0664 /sys/kernel/ems/emstune/req_mode
+    chmod 0664 /sys/kernel/ems/emstune/req_level
+
     # EAS stune boosting interfaces
     chown system system /dev/stune/top-app/schedtune.boost
     chown system system /dev/stune/top-app/schedtune.prefer_idle
@@ -243,7 +246,9 @@ on init
     chown system system /dev/hsi0_throughput_max
     chown system system /dev/ufd_throughput
     chown system system /dev/ufd_throughput_max
+
     chown system system /sys/kernel/gpu/gpu_ifpo_runtime_control
+    chmod 0664 /sys/kernel/gpu/gpu_ifpo_runtime_control
 
     setprop vendor.powerhal.init 1
 
@@ -477,9 +482,6 @@ on init
 
     # DATA_INJECTION
     chown system radio /sys/class/sensors/ssp_sensor/data_injection_enable
-
-    # enable Firmware load force sysfs
-    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
 
     # Vibrator Firmware load
     chown system system /sys/class/sec_vib_inputff/control/firmware_load
@@ -1052,9 +1054,6 @@ on fs
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
 
-    # modem partition for cbd
-    setprop vendor.cbd.partition modem
-
     # Permissions for ds_detect
     chmod 0660 /sys/devices/platform/cpif/sim/ds_detect
     chown system system /sys/devices/platform/cpif/sim/ds_detect
@@ -1225,9 +1224,6 @@ service watchdogd /system/bin/watchdogd 10 20
     oneshot
     seclabel u:r:watchdogd:s0
 
-on property:ro.boot.slot_suffix=*
-    setprop vendor.cbd.partition modem${ro.boot.slot_suffix}
-
 on property:sys.boot_completed=1
     write /sys/kernel/mpam/control/late_init "1"
     write /sys/kernel/mpam/memory-intensive/cpbm0 "0"
@@ -1237,7 +1233,6 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.${ro.hardware}
-    write /proc/sys/vm/swappiness 100
 
 # Range Sensor
 on property:sys.boot_completed=1
@@ -1247,40 +1242,4 @@ on property:sys.boot_completed=1
 
 # KERNEL CORE MEMORY
 on boot
-    write /proc/sys/vm/swappiness 130
     write /sys/module/zram/parameters/zram_balance_ratio 0
-
-on property:ro.factory.factory_binary=factory
-    # ASV-G Spec
-    chmod 0440 /sys/kernel/asv-g/cpucl0_fused_volt
-    chmod 0440 /sys/kernel/asv-g/cpucl0_grp_volt
-    chmod 0440 /sys/kernel/asv-g/cpucl1_fused_volt
-    chmod 0440 /sys/kernel/asv-g/cpucl1_grp_volt
-    chmod 0440 /sys/kernel/asv-g/cpucl2_fused_volt
-    chmod 0440 /sys/kernel/asv-g/cpucl2_grp_volt
-    chmod 0440 /sys/kernel/asv-g/g3d_fused_volt
-    chmod 0440 /sys/kernel/asv-g/g3d_grp_volt
-    chmod 0440 /sys/kernel/asv-g/mif_fused_volt
-    chmod 0440 /sys/kernel/asv-g/mif_grp_volt
-    chmod 0440 /sys/kernel/asv-g/dsu_fused_volt
-    chmod 0440 /sys/kernel/asv-g/dsu_grp_volt
-    chmod 0440 /sys/kernel/asv-g/intsci_fused_volt
-    chmod 0440 /sys/kernel/asv-g/intsci_grp_volt
-    chmod 0440 /sys/kernel/asv-g/modem_fused_volt
-    chmod 0440 /sys/kernel/asv-g/modem_grp_volt
-    chown system system /sys/kernel/asv-g/cpucl0_fused_volt
-    chown system system /sys/kernel/asv-g/cpucl0_grp_volt
-    chown system system /sys/kernel/asv-g/cpucl1_fused_volt
-    chown system system /sys/kernel/asv-g/cpucl1_grp_volt
-    chown system system /sys/kernel/asv-g/cpucl2_fused_volt
-    chown system system /sys/kernel/asv-g/cpucl2_grp_volt
-    chown system system /sys/kernel/asv-g/g3d_fused_volt
-    chown system system /sys/kernel/asv-g/g3d_grp_volt
-    chown system system /sys/kernel/asv-g/mif_fused_volt
-    chown system system /sys/kernel/asv-g/mif_grp_volt
-    chown system system /sys/kernel/asv-g/dsu_fused_volt
-    chown system system /sys/kernel/asv-g/dsu_grp_volt
-    chown system system /sys/kernel/asv-g/intsci_fused_volt
-    chown system system /sys/kernel/asv-g/intsci_grp_volt
-    chown system system /sys/kernel/asv-g/modem_fused_volt
-    chown system system /sys/kernel/asv-g/modem_grp_volt

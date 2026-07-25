@@ -1,0 +1,9 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_camera_default app_efs_file:dir r_dir_perms;
+allow hal_camera_default efs_file:dir r_dir_perms;
+allow hal_camera_default efs_file:file r_file_perms;
+allow hal_camera_default sysfs_camera_writable:file rw_file_perms;

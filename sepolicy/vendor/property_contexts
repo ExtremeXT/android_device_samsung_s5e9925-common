@@ -1,0 +1,29 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Bluetooth
+vendor.bluetooth_fw_ver             u:object_r:vendor_bluetooth_prop:s0
+
+# Misc
+ro.vendor.qti.va_aosp.support       u:object_r:vendor_placeholder_prop:s0
+
+# NFC
+ro.vendor.nfc.                 u:object_r:vendor_sec_nfc_prop:s0
+vendor.seHal.init              u:object_r:vendor_secure_element_prop:s0
+
+# HWC
+vendor.hwc.display.                u:object_r:vendor_hwc_prop:s0
+vendor.sbwchelper.                 u:object_r:vendor_hwc_prop:s0
+
+# TEEgris
+vendor.teegris.new                 u:object_r:vendor_tee_script_prop:s0
+
+# Weaver
+vendor.s.securehw.available     u:object_r:vendor_securehw_prop:s0
+vendor.s.securenvm.available    u:object_r:vendor_securenvm_prop:s0
+
+# Wi-Fi
+vendor.wlan.driver.version     u:object_r:vendor_wifi_version_prop:s0
+vendor.wlan.firmware.version   u:object_r:vendor_wifi_version_prop:s0

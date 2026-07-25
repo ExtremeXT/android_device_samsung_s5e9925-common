@@ -91,8 +91,8 @@ PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
 
 # ENN
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks-service-enn
+#PRODUCT_PACKAGES += \
+#    android.hardware.neuralnetworks-service-enn
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -159,8 +159,8 @@ PRODUCT_PACKAGES += \
     public.libraries.txt
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.samsung-exynos
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.livedisplay-service.samsung-exynos
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -304,8 +304,8 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10b00000.dwc3)
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.samsung
+#PRODUCT_PACKAGES += \
+#    android.hardware.vibrator-service.samsung
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/s5e9925-common/s5e9925-common-vendor.mk)

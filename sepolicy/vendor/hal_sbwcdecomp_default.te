@@ -1,0 +1,15 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+type hal_sbwcdecomp_default, domain;
+type hal_sbwcdecomp_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_sbwcdecomp_default)
+hal_client_domain(hal_sbwcdecomp_default, hal_allocator)
+
+binder_call(hal_sbwcdecomp_default, servicemanager)
+binder_call(servicemanager, hal_sbwcdecomp_default)
+
+add_service(hal_sbwcdecomp_default, hal_sbwcdecomp_service)
