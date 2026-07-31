@@ -114,6 +114,11 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
+    'vendor/lib64/libsec-ril.so': blob_fixup()
+        # Change fallback value of ro.build.version.oneui in SimManager (3 matches)
+        .sig_replace('00 24 05 91 E1 03 1F 2A', '00 24 05 91 81 58 9D 52')
+        .sig_replace('00 24 05 91 E1 03 1F 2A', '00 24 05 91 81 58 9D 52')
+        .sig_replace('00 24 05 91 E1 03 1F 2A', '00 24 05 91 81 58 9D 52'),
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
