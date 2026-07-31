@@ -89,7 +89,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libprotobuf-cpp-full-21.7.so', 'libprotobuf-cpp-full-21.12.so')
         .sig_replace(
             '0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
-            '0E 40 F9 E1 03 16 AA 82 0c 80 52 03 00 80 D2'),
+            '0E 40 F9 E1 03 16 AA 82 0c 80 52 03 00 80 D2')
+        # Change fallback value of ro.build.version.oneui in SimManager
+        .sig_replace('00 24 05 91 E1 03 1F 2A', '00 24 05 91 81 58 9D 52'),
+
 }  # fmt: skip
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
