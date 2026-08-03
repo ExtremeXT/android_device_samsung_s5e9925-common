@@ -6,7 +6,6 @@ system_ext	                        /system_ext         ext4    ro	              
 vendor	                            /vendor             erofs    ro                                                                                                              wait,logical,first_stage_mount
 vendor_dlkm	                        /vendor_dlkm	    erofs    ro	                                                                                                            wait,logical,first_stage_mount
 product	                            /product	        ext4    ro	                                                                                                            wait,logical,first_stage_mount
-odm	                                /odm                erofs    ro	                                                                                                            wait,logical,first_stage_mount
 
 # Classic Partitions
 /dev/block/by-name/boot             /boot               emmc    defaults                                                                                                        first_stage_mount,formattable
