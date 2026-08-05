@@ -1,0 +1,23 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+type hal_sbwcdecomp_default, domain;
+type hal_sbwcdecomp_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_sbwcdecomp_default)
+hal_client_domain(hal_sbwcdecomp_default, hal_graphics_allocator)
+
+add_service(hal_sbwcdecomp_default, hal_sbwcdecomp_service)
+binder_call(hal_sbwcdecomp_default, servicemanager)
+
+allow hal_sbwcdecomp_default video_device:chr_file rw_file_perms;
+
+# appdomain rules
+binder_call(appdomain, hal_sbwcdecomp_default)
+allow { platform_app priv_app system_app untrusted_app } hal_sbwcdecomp_service:service_manager find;
+
+# surfaceflinger rules
+binder_call(surfaceflinger, hal_sbwcdecomp_default)
+allow surfaceflinger hal_sbwcdecomp_service:service_manager find;

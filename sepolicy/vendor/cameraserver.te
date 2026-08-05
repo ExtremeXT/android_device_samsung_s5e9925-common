@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Hide QCOM camera prop denials
+dontaudit cameraserver vendor_camera_prop:file r_file_perms;

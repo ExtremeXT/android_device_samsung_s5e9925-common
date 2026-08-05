@@ -1,0 +1,12 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+hal_client_domain(hal_power_default, hal_thermal)
+binder_call(servicemanager, hal_power_default)
+
+r_dir_file(hal_power_default, sysfs_gpu)
+
+allow hal_power_default fwk_stats_service:service_manager find;
+allow hal_power_default hal_thermal_service:service_manager find;

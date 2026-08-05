@@ -1,0 +1,20 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Camera
+type dmabuf_camera_heap_device, dmabuf_heap_device_type, dev_type, mlstrustedobject;
+type jsqz_device, dev_type;
+
+# Memtrack
+type dmabuf_trace_device, dev_type;
+
+# NPU
+type npu_device, dev_type;
+
+# Sensors
+type range_sensor_device, dev_type;
+
+# UWB
+type uwb_device, dev_type;

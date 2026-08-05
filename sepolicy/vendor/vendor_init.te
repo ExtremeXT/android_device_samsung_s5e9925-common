@@ -1,0 +1,18 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+r_dir_file(vendor_init, proc_bootconfig)
+r_dir_file(vendor_init, proc_cmdline)
+r_dir_file(vendor_init, proc_sched)
+
+allow vendor_init cgroup:file rw_file_perms;
+allow vendor_init gsi_metadata_file:dir search;
+allow vendor_init proc_sched:file w_file_perms;
+allow vendor_init tmpfs:dir rw_dir_perms;
+get_prop(vendor_init, vendor_radio_prop)
+get_prop(vendor_init, vts_status_prop)
+set_prop(vendor_init, vendor_securehw_prop)
+set_prop(vendor_init, vendor_securenvm_prop)
+set_prop(vendor_init, vendor_wifi_prop)

@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# NFC
+type vendor_hal_nxpnfc_service, hal_service_type, service_manager_type;
+
+# SBWC
+type hal_sbwcdecomp_service, hal_service_type, service_manager_type;

@@ -1,0 +1,17 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+type tee_script, domain;
+type tee_script_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(tee_script)
+
+allow tee_script vendor_toolbox_exec:file execute_no_trans;
+
+allow tee_script block_device:dir search;
+allow tee_script radio_block_device:blk_file r_file_perms;
+allow tee_script radio_block_device:file r_file_perms;
+
+set_prop(tee_script, vendor_tee_script_prop)

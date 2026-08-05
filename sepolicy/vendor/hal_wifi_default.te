@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_wifi_default proc_net:file rw_file_perms;
+allow hal_wifi_default self:capability sys_module;
+allow hal_wifi_default socket_device:dir rw_dir_perms;
+allow hal_wifi_default socket_device:sock_file create_file_perms;
+set_prop(hal_wifi_default, vendor_wifi_prop)

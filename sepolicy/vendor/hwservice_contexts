@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# GNSS
+vendor.samsung.hardware.gnss::ISehGnss                                u:object_r:hal_gnss_hwservice:s0
+
+# Thermal - placeholder 
+vendor.samsung.hardware.thermal::ISehThermal                          u:object_r:hal_thermal_hwservice:s0

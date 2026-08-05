@@ -1,0 +1,9 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_audio_default rild:unix_stream_socket connectto;
+
+# Hide QCOM audio prop denials
+dontaudit hal_audio_default vendor_placeholder_prop:file read;

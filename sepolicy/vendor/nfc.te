@@ -1,0 +1,12 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow nfc nfc_vendor_data_file:dir rw_dir_perms;
+allow nfc nfc_vendor_data_file:file create_file_perms;
+allow nfc vendor_hal_nxpnfc_service:service_manager find;
+
+# Hide spammy AVC
+dontaudit nfc system_data_file:dir rw_dir_perms;
+dontaudit nfc system_data_file:file create_file_perms;

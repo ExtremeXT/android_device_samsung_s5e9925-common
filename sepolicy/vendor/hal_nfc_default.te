@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow hal_nfc_default nfc_device:chr_file rw_file_perms;
+allow hal_nfc_default nfc_vendor_data_file:dir create_dir_perms;
+allow hal_nfc_default nfc_vendor_data_file:file create_file_perms;
+allow hal_nfc_default vendor_hal_nxpnfc_service:service_manager { find add };
+get_prop(hal_nfc_default, vendor_nfc_prop)

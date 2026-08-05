@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# NFC
+vendor.nxp.nxpnfc_aidl.INxpNfc/default                                          u:object_r:vendor_hal_nxpnfc_service:s0
+
+# SBWC
+vendor.samsung_slsi.hardware.SbwcDecompService.ISbwcDecompService/default       u:object_r:hal_sbwcdecomp_service:s0

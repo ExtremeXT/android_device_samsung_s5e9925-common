@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Hide QCOM audio prop denials
+dontaudit audioserver vendor_placeholder_prop:file read;
