@@ -105,7 +105,7 @@ vendor/bin/hw/rild|560cf02e1090d2207af38598b4a20121333fdca3
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml|8a78a095378827de038b13e0470f6b43d60cf71a
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
 vendor/lib64/libril_sem.so|f472e6e480360ec25dec47fc9d503f42d153bc53
-vendor/lib64/libsec-ril.so|998ad2d44439286c9835bc40dce75141cad6f394
+vendor/lib64/libsec-ril.so:vendor/lib64/libsec-ril-impl.so;FIX_SONAME|998ad2d44439286c9835bc40dce75141cad6f394|5c11d8e49a6f09b6401ecc79fae61b9fea465c92
 vendor/lib64/libsecril-client.so|5492db9ef074c7e9a7bceb8ac9644fd8d32dc74f
 vendor/lib64/libsemnativecarrierfeature.so|98a7626528fdd41263239d0d93f316747ea8b712
 vendor/lib64/libVendorSemDataProps.so|a90e87724b4fee5b3bc741ccc35969c9bef8b62d
