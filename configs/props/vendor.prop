@@ -105,6 +105,9 @@ ro.vendor.epdg.support=true
 vendor.s.securehw.available=false
 vendor.s.securenvm.available=false
 
+# Wi-Fi
+ro.boot.wificountrycode=00
+
 # ZRAM
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
