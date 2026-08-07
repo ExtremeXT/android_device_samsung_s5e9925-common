@@ -117,3 +117,7 @@ vendor/tee/driver/00000000-0000-0000-0000-564c544b4456:vendor/etc/tee_new/driver
 vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_:vendor/etc/tee_new/driver/18d9f073-18a5-4ade-9def-875e07f7f293_
 vendor/tee/ffffffff-0000-0000-0000-000000000030:vendor/etc/tee_new/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100:vendor/etc/tee_new/tui/resolution_common/ID00000100
+
+# Wi-Fi
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
