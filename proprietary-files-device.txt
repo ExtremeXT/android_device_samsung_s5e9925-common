@@ -31,6 +31,9 @@ vendor/etc/dqe/calib_data_colormode0.xml
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin:vendor_ramdisk/lib/firmware/sgpu/vangogh_lite_unified.bin
 
+# Sensors
+vendor/lib64/sensors.sensorhub.so
+
 # TEEgris Firmware (latest)
 vendor/tee/00000000-0000-0000-0000-000000010081:vendor/etc/tee_new/00000000-0000-0000-0000-000000010081
 vendor/tee/00000000-0000-0000-0000-000000020081:vendor/etc/tee_new/00000000-0000-0000-0000-000000020081

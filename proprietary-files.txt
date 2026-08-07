@@ -81,6 +81,9 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
+# Sensors
+vendor/lib64/sensors.flicker.so
+
 # TEEgris
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
