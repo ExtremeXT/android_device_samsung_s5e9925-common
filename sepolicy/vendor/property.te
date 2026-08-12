@@ -18,7 +18,3 @@ vendor_internal_prop(vendor_secure_element_prop)
 
 # TEEgris
 vendor_internal_prop(vendor_tee_script_prop)
-
-# Weaver
-vendor_internal_prop(vendor_securehw_prop)
-vendor_internal_prop(vendor_securenvm_prop)

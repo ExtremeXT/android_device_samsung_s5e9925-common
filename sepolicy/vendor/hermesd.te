@@ -7,16 +7,8 @@ type hermesd, domain;
 type hermesd_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(hermesd)
-hal_server_domain(hermesd, hal_gatekeeper)
-hal_server_domain(hermesd, hal_weaver)
-binder_use(hermesd)
 
-allow hermesd self:capability2 wake_alarm;
 allow hermesd ssp_device:chr_file rw_file_perms;
 allow hermesd tz_user_device:chr_file rw_file_perms;
-get_prop(hermesd, vendor_tztsdaemon_prop)
-set_prop(hermesd, vendor_securehw_prop)
-set_prop(hermesd, vendor_securenvm_prop)
 
-# init rules
-allow init socket_device:sock_file { create setattr unlink };
+get_prop(hermesd, vendor_tztsdaemon_prop)

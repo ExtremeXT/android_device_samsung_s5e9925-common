@@ -760,10 +760,6 @@ on post-fs-data
     mkdir /data/vendor/gk 0771 system system
     mkdir /mnt/vendor/persist/gk 0700 system system
 
-    # Weaver data
-    mkdir /mnt/vendor/persist/weaver 0700 system system
-    mkdir /data/vendor/weaver 0700 system system
-
     # Video data
     mkdir /data/vendor/media 0700 mediacodec mediacodec
     mkdir /data/vendor/media/gpu 0700 mediacodec mediacodec
