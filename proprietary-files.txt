@@ -114,11 +114,6 @@ vendor/lib64/libOpenCL.so
 vendor/lib64/libSGPUOpenCL.so
 
 # Keymint
-vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service.samsung
-vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.keymint-service.samsung.rc
-vendor/lib64/lib_android_keymaster_keymint_utils.so:vendor/lib64/lib_android_keymaster_skeymint_utils.so;FIX_SONAME
-vendor/lib64/libkeymaster_portable.so:vendor/lib64/libkeymaster_portable.samsung.so;FIX_SONAME
-vendor/lib64/libkeymint.so:vendor/lib64/libskeymint.so;FIX_SONAME
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
