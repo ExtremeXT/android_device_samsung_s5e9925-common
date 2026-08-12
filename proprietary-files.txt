@@ -116,7 +116,6 @@ vendor/lib64/libSGPUOpenCL.so
 # Keymint
 vendor/lib64/libskeymint10device.so
 vendor/lib64/libskeymint_cli.so
-vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
 # RIL
 vendor/etc/init/init.baseband.rc
