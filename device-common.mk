@@ -281,6 +281,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # TEEgris
 PRODUCT_PACKAGES += \
+    hermesd \
     init.s5e9925.tee.rc \
     tee.sh
 

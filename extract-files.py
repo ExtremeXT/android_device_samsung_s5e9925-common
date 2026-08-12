@@ -58,9 +58,6 @@ def rename_dynamic_symbol(
 
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/bin/hermesd': blob_fixup()
-        .binary_regex_replace(b'security.securehw.available', b'vendor.s.securehw.available')
-        .binary_regex_replace(b'security.securenvm.available', b'vendor.s.securenvm.available'),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service.samsung',
         'vendor/lib64/lib_android_keymaster_skeymint_utils.so',

@@ -27,10 +27,6 @@ vendor.sbwchelper.                                              u:object_r:vendo
 # TEEgris
 vendor.teegris.new                                              u:object_r:vendor_tee_script_prop:s0
 
-# Weaver
-vendor.s.securehw.available                                     u:object_r:vendor_securehw_prop:s0
-vendor.s.securenvm.available                                    u:object_r:vendor_securenvm_prop:s0
-
 # Wi-Fi
 vendor.wlan.driver.version                                      u:object_r:vendor_wifi_prop:s0
 vendor.wlan.firmware.version                                    u:object_r:vendor_wifi_prop:s0
