@@ -24,6 +24,9 @@ vendor.seHal.init                                               u:object_r:vendo
 vendor.hwc.display.                                             u:object_r:vendor_hwc_prop:s0
 vendor.sbwchelper.                                              u:object_r:vendor_hwc_prop:s0
 
+# Recovery
+vendor.firmware_flashable                                       u:object_r:vendor_tee_script_prop:s0
+
 # TEEgris
 vendor.teegris.new                                              u:object_r:vendor_tee_script_prop:s0
 

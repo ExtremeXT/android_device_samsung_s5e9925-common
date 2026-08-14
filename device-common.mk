@@ -138,7 +138,6 @@ $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 PRODUCT_PACKAGES += \
     fstab.s5e9925 \
     fstab.s5e9925.vendor_ramdisk \
-    init.recovery.s5e9925.rc \
     init.s5e9925.rc \
     init.samsung.rc \
     ueventd.s5e9925.rc
@@ -255,6 +254,11 @@ PRODUCT_PACKAGES += \
 # PowerShare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare-service.samsung
+
+# Recovery
+PRODUCT_PACKAGES += \
+    firmware.sh.recovery \
+    init.recovery.s5e9925.rc
 
 # RIL
 PRODUCT_PACKAGES += \

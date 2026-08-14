@@ -81,6 +81,12 @@ prebuilt_etc {
 }
 
 sh_binary {
+    name: "firmware.sh",
+    src: "firmware.sh",
+    recovery: true,
+}
+
+sh_binary {
     name: "tee.sh",
     src: "tee.sh",
     vendor: true,

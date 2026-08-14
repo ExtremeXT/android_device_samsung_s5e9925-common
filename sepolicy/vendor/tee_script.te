@@ -15,3 +15,10 @@ allow tee_script radio_block_device:blk_file r_file_perms;
 allow tee_script radio_block_device:file r_file_perms;
 
 set_prop(tee_script, vendor_tee_script_prop)
+
+# Work around broken SEPolicy in Recovery mode
+recovery_only(`
+allow tee_script rootfs:dir r_dir_perms;
+allow tee_script rootfs:file r_file_perms;
+allow tee_script rootfs:file { entrypoint execute execute_no_trans };
+');
