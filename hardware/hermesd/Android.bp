@@ -1,0 +1,17 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "hermesd",
+    init_rc: ["hermesd.rc"],
+    vendor: true,
+    shared_libs: ["libteecl"],
+    srcs: [
+        "hermes.c",
+        "hwvault.c",
+        "shctrl.c",
+    ],
+    local_include_dirs: ["include"],
+}
