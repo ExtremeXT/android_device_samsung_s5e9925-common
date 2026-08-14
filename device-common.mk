@@ -83,6 +83,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
+# CAS
+TARGET_REQUIRES_HIDL_CAS_HAL := false
+
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
