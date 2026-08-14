@@ -150,11 +150,12 @@
         },
         {
             "Name": "TouchscreenEnable",
-            "Path": "/sys/class/sec/tsp/input/enabled",
+            "Path": "/sys/class/sec/tsp/enabled",
             "Values": [
-                "1",
-                "0"
+                "1,0",
+                "2,1"
             ],
+            "DefaultIndex": 0,
             "ResetOnInit": true
         }
     ],
@@ -337,7 +338,7 @@
             "PowerHint": "INTERACTIVE",
             "Node": "TouchscreenEnable",
             "Duration": 0,
-            "Value": "1"
+            "Value": "2,1"
         }
     ]
 }
