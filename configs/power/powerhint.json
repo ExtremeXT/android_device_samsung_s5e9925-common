@@ -185,6 +185,12 @@
             "Value": "404000"
         },
         {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "500000"
+        },
+        {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
