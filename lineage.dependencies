@@ -4,6 +4,10 @@
         "target_path": "device/samsung_slsi/sepolicy"
     },
     {
+        "repository": "android_hardware_nxp_uwb",
+        "target_path": "hardware/nxp/uwb"
+    },
+    {
         "repository": "android_hardware_samsung",
         "target_path": "hardware/samsung"
     },
