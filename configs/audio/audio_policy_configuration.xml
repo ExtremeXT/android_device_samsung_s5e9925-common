@@ -118,6 +118,12 @@
 
                 <devicePort tagName="BT SCO Headset Mic" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source"/>
                 <devicePort tagName="Voice Call Mic" type="AUDIO_DEVICE_IN_VOICE_CALL" role="source"/>
+
+                <!-- USB Devices -->
+                <devicePort tagName="USB Device Out" type="AUDIO_DEVICE_OUT_USB_DEVICE" role="sink"/>
+                <devicePort tagName="USB Headset Out" type="AUDIO_DEVICE_OUT_USB_HEADSET" role="sink"/>
+                <devicePort tagName="USB Device In" type="AUDIO_DEVICE_IN_USB_DEVICE" role="source"/>
+                <devicePort tagName="USB Headset In" type="AUDIO_DEVICE_IN_USB_HEADSET" role="source"/>
             </devicePorts>
 
             <routes>
@@ -125,6 +131,12 @@
                        sources="primary output,fast,deep_buffer"/>
                 <route type="mix" sink="Speaker"
                        sources="primary output,fast,deep_buffer,compressed_offload,mmap_no_irq_out"/>
+
+                <!-- USB Routes -->
+                <route type="mix" sink="USB Device Out"
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback"/>
+                <route type="mix" sink="USB Headset Out"
+                       sources="primary output,fast,deep_buffer,direct output,compressed_offload,mmap_no_irq_out,hifi_playback"/>
 
                 <route type="mix" sink="BT SCO"
                        sources="primary output,fast,deep_buffer"/>
@@ -137,9 +149,10 @@
                        sources="hdmi"/>
 
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,BT SCO Headset Mic,Voice Call Mic"/>
+                       sources="Built-In Mic,BT SCO Headset Mic,Voice Call Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic"/>
+                       sources="Built-In Mic,USB Device In,USB Headset In"/>
+                <route type="mix" sink="hifi_input" sources="USB Device In"/>
             </routes>
 
         </module>
@@ -149,30 +162,18 @@
             <mixPorts>
                 <mixPort name="usb_accessory output" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                            samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                             samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
-                <mixPort name="usb_device output" role="source"/>
-                <mixPort name="usb_device input" role="sink"/>
             </mixPorts>
             <devicePorts>
                 <devicePort tagName="USB Host Out" type="AUDIO_DEVICE_OUT_USB_ACCESSORY" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                            samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                             samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
-                <devicePort tagName="USB Device Out" type="AUDIO_DEVICE_OUT_USB_DEVICE" role="sink"/>
-                <devicePort tagName="USB Headset Out" type="AUDIO_DEVICE_OUT_USB_HEADSET" role="sink"/>
-                <devicePort tagName="USB Device In" type="AUDIO_DEVICE_IN_USB_DEVICE" role="source"/>
-                <devicePort tagName="USB Headset In" type="AUDIO_DEVICE_IN_USB_HEADSET" role="source"/>
             </devicePorts>
             <routes>
                 <route type="mix" sink="USB Host Out"
-                    sources="usb_accessory output"/>
-                <route type="mix" sink="USB Device Out"
-                    sources="usb_device output"/>
-                <route type="mix" sink="USB Headset Out"
-                    sources="usb_device output"/>
-                <route type="mix" sink="usb_device input"
-                    sources="USB Device In,USB Headset In"/>
+                       sources="usb_accessory output"/>
             </routes>
         </module>
 
