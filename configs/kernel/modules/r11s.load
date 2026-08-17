@@ -303,6 +303,7 @@ hwmon.ko
 exynos-bts.ko
 exynos-btsops9925.ko
 spu_verify.ko
+exynos-usb-audio-offloading.ko
 snd-soc-tfa98xx.ko
 snd-soc-tfa_sysfs.ko
 snd-soc-s3c-dma.ko
