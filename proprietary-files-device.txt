@@ -67,8 +67,6 @@ vendor/firmware/vts.bin
 # GNSS
 vendor/bin/hw/gpsd
 vendor/etc/gnss/gps.cfg
-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
 
 # RAMDisk
 recovery/lib/firmware/sgpu/vangogh_lite_unified.bin
