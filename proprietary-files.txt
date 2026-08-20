@@ -94,12 +94,9 @@ vendor/lib64/hw/gatekeeper.s5e9925.so
 
 # GNSS
 vendor/bin/hw/gps.sh
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
 vendor/etc/gnss/ca.pem
-vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
+vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
 vendor/lib64/libwrappergps.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
 # Graphics
 vendor/etc/hdr_samsung_mx.key

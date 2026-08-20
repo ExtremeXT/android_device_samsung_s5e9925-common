@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-service.samsung \
     init.gps.rc
 
 # Graphics
