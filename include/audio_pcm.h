@@ -213,28 +213,6 @@ struct pcm_config pcm_config_low_playback = {
     .stop_threshold  = LOW_PLAYBACK_STOP,
 };
 
-// PCM Configurations for VoIP RX Playback Stream
-#define VOIP_RX_PLAYBACK_CARD SOUND_CARD0
-#define VOIP_RX_PLAYBACK_DEVICE SOUND_DEVICE_VIRT_PRIMARY_PLAYBACK
-
-#define VOIP_RX_PLAYBACK_CHANNELS DEFAULT_MEDIA_CHANNELS
-#define VOIP_RX_PLAYBACK_SAMPLING_RATE DEFAULT_MEDIA_SAMPLING_RATE
-#define VOIP_RX_PLAYBACK_PERIOD_SIZE 960
-#define VOIP_RX_PLAYBACK_PERIOD_COUNT 4
-#define VOIP_RX_PLAYBACK_FORMAT DEFAULT_MEDIA_FORMAT
-#define VOIP_RX_PLAYBACK_START VOIP_RX_PLAYBACK_PERIOD_SIZE
-#define VOIP_RX_PLAYBACK_STOP ULONG_MAX
-
-struct pcm_config pcm_config_voip_rx_playback = {
-        .channels = VOIP_RX_PLAYBACK_CHANNELS,
-        .rate = VOIP_RX_PLAYBACK_SAMPLING_RATE,
-        .period_size = VOIP_RX_PLAYBACK_PERIOD_SIZE,
-        .period_count = VOIP_RX_PLAYBACK_PERIOD_COUNT,
-        .format = VOIP_RX_PLAYBACK_FORMAT,
-        .start_threshold = VOIP_RX_PLAYBACK_START,
-        .stop_threshold = VOIP_RX_PLAYBACK_STOP,
-};
-
 // PCM Configurations for MMAP Playback Stream
 #define MMAP_PLAYBACK_CARD               SOUND_CARD0
 #define MMAP_PLAYBACK_DEVICE             SOUND_DEVICE_VIRT_AAUDIO_PLAYBACK
