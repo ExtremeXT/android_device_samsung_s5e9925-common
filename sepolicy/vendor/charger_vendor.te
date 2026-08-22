@@ -1,0 +1,7 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+allow charger_vendor proc_last_kmsg:file rw_file_perms;
+dontaudit charger_vendor default_prop:file r_file_perms;
