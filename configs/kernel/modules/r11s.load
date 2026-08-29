@@ -287,6 +287,7 @@ repeater_tusb2e11_module.ko
 mfd_max77705.ko
 shub.ko
 sensor_core.ko
+stm_ts.ko
 mstdrv.ko
 max77705-fuelgauge.ko
 pdic_max77705.ko

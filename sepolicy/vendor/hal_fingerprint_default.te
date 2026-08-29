@@ -5,3 +5,5 @@
 
 r_dir_file(hal_fingerprint_default, efs_file)
 r_dir_file(hal_fingerprint_default, sec_efs_file)
+r_dir_file(hal_fingerprint_default, sysfs_battery)
+r_dir_file(hal_fingerprint_default, sysfs_lcd_writable)
