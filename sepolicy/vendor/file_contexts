@@ -33,6 +33,7 @@
 
 # NFC
 /data/vendor/nfc(/.*)?                                                                          u:object_r:nfc_vendor_data_file:s0
+/dev/p3                                                                                         u:object_r:nfc_device:s0
 /dev/p61                                                                                        u:object_r:nfc_device:s0
 /dev/pn547                                                                                      u:object_r:nfc_device:s0
 
@@ -41,11 +42,11 @@
 
 # SYSFS
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                                   u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/14cc0000.contexthub/iio:device[0-9]*/buffer/data_available                u:object_r:sysfs_iio:s0
-/sys/devices/platform/14cc0000.contexthub/iio:device[0-9]*/buffer/enable                        u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/14cc0000.contexthub/iio:device[0-9]*/buffer/length                        u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/14cc0000.contexthub/iio:device[0-9]*/name                                 u:object_r:sysfs_iio:s0
-/sys/devices/platform/14cc0000.contexthub/iio:device[0-9]*/poll_delay                           u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/(14cc0000\.contexthub|shub)/iio:device[0-9]*/buffer/data_available        u:object_r:sysfs_iio:s0
+/sys/devices/platform/(14cc0000\.contexthub|shub)/iio:device[0-9]*/buffer/enable                u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/(14cc0000\.contexthub|shub)/iio:device[0-9]*/buffer/length                u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/(14cc0000\.contexthub|shub)/iio:device[0-9]*/name                         u:object_r:sysfs_iio:s0
+/sys/devices/platform/(14cc0000\.contexthub|shub)/iio:device[0-9]*/poll_delay                   u:object_r:sysfs_sensors_writable:s0
 
 # Sensors
 /dev/range_sensor                                                                               u:object_r:range_sensor_device:s0
@@ -64,6 +65,7 @@
 /vendor/bin/hw/android.hardware.graphics.allocator-aidl-service-sgr                             u:object_r:hal_graphics_allocator_default_exec:s0
 /vendor/bin/hw/android.hardware.nfc-service.nxp                                                 u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/android.hardware.secure_element-service.nxp                                      u:object_r:hal_secure_element_default_exec:s0
+/vendor/bin/hw/android.hardware.secure_element-service.thales-st33                              u:object_r:hal_secure_element_default_exec:s0
 /vendor/bin/hw/android.hardware.uwb-service.nxp                                                 u:object_r:hal_uwb_default_exec:s0
 /vendor/bin/hw/gps.sh                                                                           u:object_r:gpsd_exec:s0
 /vendor/bin/hw/vendor.samsung_slsi.hardware.SbwcDecompService-service                           u:object_r:hal_sbwcdecomp_default_exec:s0

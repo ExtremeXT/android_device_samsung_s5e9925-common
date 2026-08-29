@@ -25,9 +25,14 @@ genfscon sysfs /devices/platform/16e00000.sgpu                                  
 genfscon sysfs /devices/platform/19f00000.drmdecon/hiber_exit                                                                               u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/exynos-drm                                                                                                 u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/virtual/dqe                                                                                                         u:object_r:sysfs_gpu:s0
+genfscon sysfs /kernel/gpu/gpu_freq_table                                                                                                   u:object_r:sysfs_gpu:s0
 genfscon sysfs /kernel/gpu/mem_info                                                                                                         u:object_r:sysfs_gpu:s0
 
 # Health
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-10/10-005d/power_supply/pca9482-charger/type                                            u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-10/10-0066/max77705-charger/power_supply/max77705-charger/type                          u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-10/10-0066/max77705-charger/power_supply/max77705-otg/type                              u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-10/10-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type                      u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-6/6-0057/power_supply/pca9481-charger/type                                              u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-6/6-0066/max77705-charger/power_supply/max77705-charger/type                            u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-6/6-0066/max77705-charger/power_supply/max77705-otg/type                                u:object_r:sysfs_battery:s0 
@@ -39,6 +44,7 @@ genfscon sysfs /devices/platform/14f00000.hsi2c/i2c-7/7-0066/max77705-fuelgauge/
 genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-10/10-004b/power_supply/mfc-charger/type                                                u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-10/10-005b/power_supply/mfc-charger/type                                                u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-11/11-005b/power_supply/mfc-charger/type                                                u:object_r:sysfs_battery:s0 
+genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-14/14-004b/power_supply/mfc-charger/type                                                u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/14f80000.hsi2c/i2c-14/14-005b/power_supply/mfc-charger/type                                                u:object_r:sysfs_battery:s0 
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type        u:object_r:sysfs_battery:s0 
 
@@ -66,10 +72,12 @@ genfscon sysfs /kernel/mm/vmscan/mem_boost_mode_system                          
 genfscon sysfs /class/sensors/range_sensor                                                                                                  u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/platform/acpm_mfd_bus@15960000/i2c-13/13-001f/s2mps25-gpadc/iio:device40/name                                       u:object_r:sysfs_iio:s0
 genfscon sysfs /devices/platform/acpm_mfd_bus@15960000/i2c-14/14-001f/s2mps25-gpadc/iio:device40/name                                       u:object_r:sysfs_iio:s0
+genfscon sysfs /devices/platform/acpm_mfd_bus@15960000/i2c-16/16-001f/s2mps25-gpadc/iio:device0/name                                        u:object_r:sysfs_iio:s0
 genfscon sysfs /devices/platform/acpm_mfd_bus@15960000/i2c-17/17-001f/s2mps25-gpadc/iio:device40/name                                       u:object_r:sysfs_iio:s0
 genfscon sysfs /devices/virtual/sec/hall_ic/hall_detect                                                                                     u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                                                                                 u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/flip_cover_detector_sensor/nfc_cover_status                                                         u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/light_sensor/hall_ic                                                                                u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                                                                              u:object_r:sysfs_sensors_writable:s0
 
 # UFS
@@ -92,6 +100,7 @@ genfscon sysfs /devices/platform/mfc/video4linux/video9/name                    
 
 # Vibrator
 genfscon sysfs /devices/virtual/sec_vib_inputff/control/use_sep_index                                                                       u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/virtual/vib_info_class/vib_support_info/functions                                                                   u:object_r:sysfs_vibrator:s0
 
 # Wi-Fi
 genfscon sysfs /devices/platform/113b0000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/p2p0/mtu                                            u:object_r:sysfs_net:s0

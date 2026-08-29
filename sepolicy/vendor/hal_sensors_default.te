@@ -9,3 +9,7 @@ allow hal_sensors_default efs_file:file create_file_perms;
 allow hal_sensors_default log_vendor_data_file:dir search;
 allow hal_sensors_default range_sensor_device:chr_file rw_file_perms;
 allow hal_sensors_default sysfs:dir r_dir_perms;
+
+# Hide denial of setting persist.sns.camera_light which is unused on AOSP
+dontaudit hal_sensors_default default_prop:file rw_file_perms;
+dontaudit hal_sensors_default property_socket:sock_file rw_file_perms;

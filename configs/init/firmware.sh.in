@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-if strings /dev/block/modem | grep -Eq "FYI3|GZD7"; then
+if strings /dev/block/modem | grep -Eq "FYI3|GZD7|EYI1|GZG1"; then
     setprop vendor.firmware_flashable true
 fi
