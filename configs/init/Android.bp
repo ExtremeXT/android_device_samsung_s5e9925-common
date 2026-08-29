@@ -3,6 +3,25 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+genrule {
+    name: "gen_firmware_scripts",
+    srcs: [
+        "firmware.sh.in",
+        "tee.sh.in",
+    ],
+    out: [
+        "firmware.sh",
+        "tee.sh",
+    ],
+    cmd: "for f in $(in); do " +
+         "  out=$(genDir)/\"$$(basename \"$$f\" .in)\"; " +
+         "  sed 's/modem/" + select(soong_config_variable("s5e9925", "modem_partition"), {
+             any @ val: val,
+             default: "sda17",
+         }) + "/g' \"$$f\" > \"$$out\"; " +
+         "done",
+}
+
 prebuilt_etc {
     name: "fstab.s5e9925",
     src: "fstab.s5e9925",
@@ -89,12 +108,12 @@ prebuilt_etc {
 
 sh_binary {
     name: "firmware.sh",
-    src: "firmware.sh",
+    src: ":gen_firmware_scripts{firmware.sh}",
     recovery: true,
 }
 
 sh_binary {
     name: "tee.sh",
-    src: "tee.sh",
+    src: ":gen_firmware_scripts{tee.sh}",
     vendor: true,
 }
