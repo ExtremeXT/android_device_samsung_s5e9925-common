@@ -1,0 +1,6 @@
+on early-init
+    export MEMTAG_OPTIONS off
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules qbt2000_spidev.ko
+
+on fs
+    write /sys/devices/platform/14cc0000.contexthub/poweron 1

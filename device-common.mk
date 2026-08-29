@@ -168,11 +168,13 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.samsung-exynos
 
 # NFC
+PRODUCT_PACKAGES += \
+    init.nfc.samsung.rc
+
 ifeq ($(BOARD_HAVE_NXP_NFC), true)
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
     android.hardware.secure_element-service.nxp \
-    init.nfc.samsung.rc \
     libese-nxp.conf \
     libnfc-nxp.conf \
     libnfc-nxp_RF.conf

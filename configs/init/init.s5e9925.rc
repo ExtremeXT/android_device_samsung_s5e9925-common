@@ -6,8 +6,8 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules input_booster_lkm.ko
     export MEMTAG_OPTIONS off
 
-    # fingerprintdriver, fingerprint, fingerprint_sysfs qbt2000_spidev
-    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules fingerprint.ko fingerprint_sysfs.ko qbt2000_spidev.ko
+    # fingerprintdriver, fingerprint, fingerprint_sysfs
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules fingerprint.ko fingerprint_sysfs.ko
 
     # sec_debug
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sec_debug_coredump.ko
@@ -202,6 +202,7 @@ on init
     chown system system /sys/devices/platform/exynos-migov/control/control_profile
     chown system system /sys/devices/platform/exynos-migov/control/set_margin
     chown system system /sys/devices/platform/exynos-migov/control/fragutil_thr
+    chown system system /sys/devices/platform/exynos-migov/control/user_target_fps
     chown system system /sys/devices/platform/exynos-migov/migov/running
     chown system system /dev/cpu_dma_latency
     chown system system /dev/cluster0_freq_min
@@ -265,6 +266,7 @@ on init
     write /proc/sys/net/ipv4/tcp_wmem "524288 1048576 4194304"
     write /proc/sys/net/ipv4/tcp_mem "44259 59012 88518"
     write /proc/sys/net/ipv4/udp_mem "88518 118025 177036"
+    write /proc/sys/net/ipv4/tcp_adv_win_scale "2"
 
     start watchdogd
 
@@ -524,6 +526,10 @@ on post-fs-data
     chown audioserver system /proc/abox/snapshot_1/clear
     chown audioserver system /proc/abox/dump/log
 
+    # Audio abox bigdata
+    chown system audio /sys/class/audio/dsp/srcnt
+    chown system audio /sys/class/audio/dsp/srcnt_keep
+
     # Audio amp bigdata
     chown system audio /sys/class/audio/amp/temperature_max_0
     chown system audio /sys/class/audio/amp/temperature_keep_max_0
@@ -593,6 +599,24 @@ on post-fs-data
     chown system audio /sys/class/cirrus/cirrus_bd/over_exc_count_1
     chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_0
     chown system audio /sys/class/cirrus/cirrus_bd/over_temp_count_1
+
+    # TFA Amp Calibration and Factory test
+    chown system system /sys/class/tfa/tfa_cal/status
+    chown system system /sys/class/tfa/tfa_cal/rdc
+    chown system system /sys/class/tfa/tfa_cal/rdc_r
+    chown system system /sys/class/tfa/tfa_cal/temp
+    chown system system /sys/class/tfa/tfa_cal/temp_r
+    chown system system /sys/class/tfa/tfa_vval/status
+    chown system system /sys/class/tfa/tfa_vval/status_r
+    chown system system /sys/class/tfa/tfa_vval/validation
+    chmod 0664 /sys/class/tfa/tfa_cal/status
+    chmod 0664 /sys/class/tfa/tfa_cal/rdc
+    chmod 0664 /sys/class/tfa/tfa_cal/rdc_r
+    chmod 0664 /sys/class/tfa/tfa_cal/temp
+    chmod 0664 /sys/class/tfa/tfa_cal/temp_r
+    chmod 0664 /sys/class/tfa/tfa_vval/status
+    chmod 0664 /sys/class/tfa/tfa_vval/status_r
+    chmod 0664 /sys/class/tfa/tfa_vval/validation
 
     # Permissions Camera
     mkdir /data/vendor/camera 0770 cameraserver system
@@ -983,9 +1007,6 @@ on fs
     wait /dev/block/by-name/sec_efs
     mount ext4 /dev/block/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
-    wait /dev/block/by-name/spu
-    mount ext4 /dev/block/by-name/spu /spu nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
     restorecon_recursive /mnt/vendor/persist
@@ -1092,6 +1113,10 @@ on fs
     chown system system /sys/class/lcd/panel/dpui
     chown system system /sys/class/lcd/panel/dpui_dbg
 
+    chown system system /sys/class/lcd/panel/mask_brightness
+    chown system system /sys/class/lcd/panel/actual_mask_brightness
+    chown system system /sys/class/lcd/panel/dsc_crc
+
     chown system graphics /sys/module/exynos_drm/parameters/dpu_event_log
     chmod 0666 /sys/module/exynos_drm/parameters/dpu_event_log
 
@@ -1136,7 +1161,6 @@ on fs
     chmod 0660 /sys/class/camera/flash/rear_flash
 
     # sensorhub start
-    write /sys/devices/platform/14cc0000.contexthub/poweron 1
     chown system radio /sys/devices/platform/14cc0000.contexthub/chub_bin_dfs
     chown system radio /sys/devices/platform/14cc0000.contexthub/chub_bin_dram
     chown system radio /sys/devices/platform/14cc0000.contexthub/chub_bin_dump_registers
